@@ -22,6 +22,11 @@
     .milk-header .nav-menu a {
       color: #a8a8a8;
       text-decoration: none; }
+  .milk-header .nav-menu::-webkit-scrollbar {
+    display: none; }
+  .milk-header .nav-menu {
+    -ms-overflow-style: none;
+    scrollbar-width: none; }
   .milk-header .nav-date {
     overflow: auto;
     white-space: nowrap;
@@ -29,6 +34,11 @@
     max-width: 29%;
     left: 40%;
     height: inherit; }
+  .milk-header .nav-date::-webkit-scrollbar {
+    display: none; }
+  .milk-header .nav-date {
+    -ms-overflow-style: none;
+    scrollbar-width: none; }
   .milk-header .nav-system {
     white-space: nowrap;
     position: absolute;
@@ -36,6 +46,11 @@
     overflow: auto;
     max-width: 24%;
     height: inherit; }
+  .milk-header .nav-system::-webkit-scrollbar {
+    display: none; }
+  .milk-header .nav-system {
+    -ms-overflow-style: none;
+    scrollbar-width: none; }
   .milk-header .nav-access {
     white-space: nowrap;
     position: absolute;
@@ -58,7 +73,8 @@
     .milk-body .desktop-content:hover {
       border: 1px solid #ff0000; }
     .milk-body .desktop-content .post-table {
-      border: none; }
+      border: none;
+      margin-top: 50px; }
       .milk-body .desktop-content .post-table .table-title {
         font-weight: bold; }
       .milk-body .desktop-content .post-table .table-linenum {
@@ -227,6 +243,13 @@ blockquote {
       background-color: #ffa500;
       width: 0%; }
 
+.draggable-toc::-webkit-scrollbar {
+  display: none; }
+
+.draggable-toc {
+  -ms-overflow-style: none;
+  scrollbar-width: none; }
+
 .post {
   margin-bottom: 50%; }
   .post ul {
@@ -255,6 +278,13 @@ blockquote {
   margin-right: 15%;
   background-color: rgba(0, 0, 0, 0.675); }
 
+.post-content::-webkit-scrollbar {
+  display: none; }
+
+.post-content {
+  -ms-overflow-style: none;
+  scrollbar-width: none; }
+
 .win .win-title {
   background-color: #ffa500;
   color: #000000;
@@ -274,6 +304,13 @@ blockquote {
   word-wrap: break-word;
   word-break: break-all;
   overflow-y: scroll; }
+
+.win .win-body::-webkit-scrollbar {
+  display: none; }
+
+.win .win-body {
+  -ms-overflow-style: none;
+  scrollbar-width: none; }
 
 .win .win-list {
   text-align: center; }
@@ -342,6 +379,13 @@ blockquote {
     width: 100%; }
   .dropdown-content a {
     text-decoration: none; }
+
+.dropdown-content::-webkit-scrollbar {
+  display: none; }
+
+.dropdown-content {
+  -ms-overflow-style: none;
+  scrollbar-width: none; }
 
 .social {
   text-align: center; }
