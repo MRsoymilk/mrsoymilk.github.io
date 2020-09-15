@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Linux工具 [ Soymilk ]</title>
+  <title>Gitbook添加自定义CSS [ Soymilk ]</title>
   
 <link rel="shortcut icon" href="/favicon/favicon.ico">
 
@@ -85,16 +85,16 @@
   <div class="milk-body">
     
 <div class="draggable-toc">
-  <div class="toc-title">Linux工具</div>
+  <div class="toc-title">Gitbook添加自定义CSS</div>
   <p>process: <span>0</span></p>
   <div class="progress-container">
     <div class="progress-bar" id="bar"></div>
   </div>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#写在前面"><span class="toc-text">写在前面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mycli"><span class="toc-text">mycli</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fzf"><span class="toc-text">fzf</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cloc"><span class="toc-text">cloc</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ccache"><span class="toc-text">ccache</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#tmux"><span class="toc-text">tmux</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#tldr"><span class="toc-text">tldr</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ranger"><span class="toc-text">ranger</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#写在前面"><span class="toc-text">写在前面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法"><span class="toc-text">方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#配置book-json文件"><span class="toc-text">配置book.json文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置自定义CSS"><span class="toc-text">设置自定义CSS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#应用"><span class="toc-text">应用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#效果"><span class="toc-text">效果</span></a></li></ol>
 </div>
 
 <div class="post-content" id="post-content">
-  <div id="top">Linux工具</div>
+  <div id="top">Gitbook添加自定义CSS</div>
   <div class="post">
     
     <div class="content-categories">
@@ -105,15 +105,15 @@
         
           <li>&gt;</li>
           <li>
-            <a href="/categories/Linux/">
-          Linux
+            <a href="/categories/IDE及工具/">
+          IDE及工具
         </a>
           </li>
       
           <li>&gt;</li>
           <li>
-            <a href="/categories/Linux/common/">
-          common
+            <a href="/categories/IDE及工具/git/">
+          git
         </a>
           </li>
       
@@ -122,45 +122,36 @@
     </div>
     <hr>
     
-    <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>Linux上一些常用的工具。</p>
-<p>例如：可以自动补全的mysql工具<code>mycli</code>，交互式搜索的<code>fzf</code>，代码统计工具<code>cloc</code>…</p>
+    <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>参考: <a href="https://chrisniael.gitbooks.io/gitbook-documentation/content/format/configuration.html" target="_blank" rel="noopener">配置|GitBook文档</a></p>
 <a id="more"></a>
 
-<h2 id="mycli"><a href="#mycli" class="headerlink" title="mycli"></a><code>mycli</code></h2><p><a href="https://www.mycli.net" target="_blank" rel="noopener">mycli</a></p>
-<p>mysql客户端，支持语法高亮和命令补全，运行在Terminal上。</p>
-<p><img src="mycli.png" alt="mycli"></p>
-<h2 id="fzf"><a href="#fzf" class="headerlink" title="fzf"></a><code>fzf</code></h2><p><a href="https://github.com/junegunn/fzf" target="_blank" rel="noopener">fzf</a></p>
-<p>命令行下模糊搜索工具，交互式智能搜索并选取文件或内容。</p>
-<p><img src="fzf.png" alt="fzf"></p>
-<h2 id="cloc"><a href="#cloc" class="headerlink" title="cloc"></a><code>cloc</code></h2><p><a href="https://github.com/AlDanial/cloc" target="_blank" rel="noopener">cloc</a></p>
-<p>代码统计工具</p>
-<p><img src="cloc.png" alt="cloc"></p>
-<h2 id="ccache"><a href="#ccache" class="headerlink" title="ccache"></a><code>ccache</code></h2><p><a href="https://wiki.gentoo.org/wiki/Ccache" target="_blank" rel="noopener">Gentoo ccache</a></p>
-<p>高速C/C++编译缓存工具，提高编译速度。</p>
-<pre><code class="bash">gcc foo.c
-ccache gcc foo.c</code></pre>
-<h2 id="tmux"><a href="#tmux" class="headerlink" title="tmux"></a><code>tmux</code></h2><p><a href="https://github.com/tmux/tmux" target="_blank" rel="noopener">tmux</a></p>
-<p>终端复用</p>
-<p><img src="tmux.png" alt="tmux"></p>
-<h2 id="tldr"><a href="#tldr" class="headerlink" title="tldr"></a><code>tldr</code></h2><p><a href="https://tldr.sh" target="_blank" rel="noopener">tldr</a></p>
-<p>简略的man文档</p>
-<p>需要额外配置颜色输出<br>文件：<code>~/.tldrrc</code></p>
-<pre><code class="json">{
-  &quot;themes&quot;: {
-    &quot;my&quot;: {
-      &quot;commandName&quot;: &quot;bold, cyan&quot;,
-      &quot;mainDescription&quot;: &quot;underline&quot;,
-      &quot;exampleDescription&quot;: &quot;yellow&quot;,
-      &quot;exampleCode&quot;: &quot;red&quot;,
-      &quot;exampleToken&quot;: &quot;dim&quot;
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p><img src="file.png" alt="file"></p>
+<h3 id="配置book-json文件"><a href="#配置book-json文件" class="headerlink" title="配置book.json文件"></a>配置<code>book.json</code>文件</h3><pre><code class="json">{
+    &quot;style&quot;: {
+        &quot;website&quot;: &quot;styles/website.css&quot;
     }
-  },
-  &quot;theme&quot;: &quot;my&quot;
 }</code></pre>
-<p><img src="tldr.png" alt="tldr"></p>
-<h2 id="ranger"><a href="#ranger" class="headerlink" title="ranger"></a><code>ranger</code></h2><p><a href="https://github.com/ranger/ranger" target="_blank" rel="noopener">ranger</a></p>
-<p>Terminal上的文件系统。无桌面环境也能使用。</p>
-<p><img src="ranger.png" alt="ranger"></p>
+<h3 id="设置自定义CSS"><a href="#设置自定义CSS" class="headerlink" title="设置自定义CSS"></a>设置自定义CSS</h3><pre><code class="css">.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-radius: 4px;
+}
+
+.alert-warning {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+}</code></pre>
+<h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><pre><code class="markdown">&lt;div class=&quot;alert alert-warning&quot;&gt;
+重要说明：在继续之前， 您应该重新阅读[Overlay和Eclasses]() 和[Portage Cache]()部分。
+&lt;/div&gt;</code></pre>
+<p><strong>注意</strong>: HTML标签内的Markdown标签会失效</p>
+<h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><p><img src="effect.png" alt="effect"></p>
 
     
     <hr>
@@ -169,8 +160,8 @@ ccache gcc foo.c</code></pre>
       <i class="fa fa-tags"></i>
       <ul>
         
-        <li><a href="/tags/common/">
-          common
+        <li><a href="/tags/git/">
+          git
         </a></li>
       
       </ul>
