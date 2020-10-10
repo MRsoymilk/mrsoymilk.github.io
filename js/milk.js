@@ -65,6 +65,8 @@ $(() => {
       os = '<i class="fa fa-windows" aria-hidden="true"></i>';
     } else if (agent.indexOf("Android") >= 0) {
       os = '<i class="fa fa-android" aria-hidden="true"></i';
+    } else if (agent.indexOf("Mac")) {
+      os = '<i class="fa fa-apple" aria-hidden="true"></i>';
     } else {
       os = navigator.platform;
     }
@@ -78,6 +80,8 @@ $(() => {
       web = '<i class="fa fa-chrome" aria-hidden="true"></i>';
     } else if (agent.indexOf("Edge") >= 0) {
       web = '<i class="fa fa-edge" aria-hidden="true"></i>';
+    } else if (agent.indexOf("Safari")) {
+      web = '<i class="fa fa-safari" aria-hidden="true"></i>';
     } else {
       web = '<i class="fa fa-internet-explorer" aria-hidden="true"></i>';
     }
@@ -94,9 +98,9 @@ $(() => {
   $(() => {
     setInterval(() => {
       var myDate = new Date();
-      var year = myDate.getFullYear();  // year
-      var mon = myDate.getMonth() + 1;  // month
-      var date = myDate.getDate();  // date
+      var year = myDate.getFullYear(); // year
+      var mon = myDate.getMonth() + 1; // month
+      var date = myDate.getDate(); // date
       _week = myDate.getDay();
       var weeks = [
         "Sunday",
@@ -107,9 +111,9 @@ $(() => {
         "Friday",
         "Saturday",
       ];
-      var h = myDate.getHours();  // hours(0-23)
-      var m = myDate.getMinutes();  // minutes(0-59)
-      var s = myDate.getSeconds();  // seconds
+      var h = myDate.getHours(); // hours(0-23)
+      var m = myDate.getMinutes(); // minutes(0-59)
+      var s = myDate.getSeconds(); // seconds
 
       $("#date").html(
         year +
@@ -161,4 +165,32 @@ $(() => {
 
   // comment tab page
   $("#comment-tabs").tabs();
+
+  // code copy function
+  $(() => {
+    $(".hljs").prepend(
+      "<div class='hljs-prompt'><i class='fa fa-files-o' aria-hidden='true'>copy</i></div>"
+    );
+    $(".hljs").hover(
+      function () {
+        _this = this;
+        $(this).children(".hljs-prompt").show();
+        $(this)
+          .children(".hljs-prompt")
+          .click(function () {
+            var text = $(_this).text();
+            text = text.substring(4, text.length);
+            navigator.clipboard.writeText(text).then(
+              function () {},
+              function () {
+                alert("copy failed");
+              }
+            );
+          });
+      },
+      function () {
+        $(this).children(".hljs-prompt").hide();
+      }
+    );
+  });
 });

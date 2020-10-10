@@ -68,6 +68,7 @@
     background-color: rgba(0, 0, 0, 0.675);
     position: absolute;
     overflow-y: scroll;
+    overflow-x: hidden;
     height: 100%;
     width: 54.5%; }
     .milk-body .desktop-content:hover {
@@ -75,6 +76,8 @@
     .milk-body .desktop-content .post-table {
       border: none;
       margin-top: 50px; }
+      .milk-body .desktop-content .post-table .hljs {
+        width: 54.5%; }
       .milk-body .desktop-content .post-table .table-title {
         font-weight: bold; }
       .milk-body .desktop-content .post-table .table-linenum {
@@ -251,7 +254,10 @@ blockquote {
   scrollbar-width: none; }
 
 .post {
-  margin-bottom: 50%; }
+  margin-bottom: 50%;
+  max-width: 1056px;
+  margin-left: auto !important;
+  margin-right: auto !important; }
   .post ul {
     margin-left: 30px;
     list-style-type: disc;
@@ -284,6 +290,13 @@ blockquote {
 .post-content {
   -ms-overflow-style: none;
   scrollbar-width: none; }
+
+.hljs-prompt {
+  display: none;
+  color: rgba(255, 255, 255, 0.5); }
+
+.hljs-prompt:hover {
+  color: white; }
 
 .win .win-title {
   background-color: #ffa500;
@@ -395,6 +408,10 @@ blockquote {
 .comment-tabs li {
   display: inline;
   border: 1px solid; }
+
+#vcomments {
+  background-color: #ffffff;
+  margin-top: 20px; }
 
 /* cyrillic */
 @font-face {
