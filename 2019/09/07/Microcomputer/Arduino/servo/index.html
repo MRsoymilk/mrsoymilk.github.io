@@ -230,6 +230,9 @@ void loop(){
     
       <li><a href="#livere">LiveRe</a></li>
     
+    
+      <li><a href="#valine">Valine</a></li>
+    
   </ul>
   
   
@@ -237,7 +240,7 @@ void loop(){
       
         
         <!--PC和WAP自适应版-->
-        <div id="SOHUCS" ></div>
+        <div id="SOHUCS"></div>
         <script type="text/javascript">
         (function(){
         var appid = "cyuGH4lBk";
@@ -278,6 +281,18 @@ void loop(){
         
     </div>
   
+  
+  
+    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+    <div id="vcomments"></div>
+    <script>
+      new Valine({
+        el: '#vcomments',
+        appId: theme.valine.appid,
+        appKey: theme.valine.appKey
+      })
+    </script>
+   
 </div>
   </div>
 </div>

@@ -1,0 +1,40 @@
+<hr>
+<p>title: vim使用整理<br>date:<br>toc: true<br>categories:<br>tags:</p>
+<hr>
+<p><img src="vim.png" alt="vim小抄"></p>
+<h2 id="查找与替换"><a href="#查找与替换" class="headerlink" title="查找与替换"></a>查找与替换</h2><p>:beg,ends/source/replace/g：在beg与end之间寻找source并替换为replace<br>:1,$s/source/replace/g：第一行与第二行寻找source并替换为replace<br>:1,$s/source/replace/gc：替换命令+确认confirm<br>:s/old/new  new替换当前行第一个old<br>:s/old/new/g  new替换当前行所有old<br>:%s/^/xxx/g  每一行行首插入xxx<br>:%s/$/xxx/g  每一行行尾插入xxx<br>:%s/old/new/g  全局替换old为new</p>
+<h2 id="存储与离开"><a href="#存储与离开" class="headerlink" title="存储与离开"></a>存储与离开</h2><p>:w：保存<br>:w!：强制写入，与权限有关<br>:q：退出vim<br>:q!：放弃编辑<br>:wq：把偶才能退出<br>ZZ：更改-&gt;存储离开，未更改-&gt;离开<br>:w[filename]：另存新文件<br>:r[filename]：追加filename文件到光标之后<br>:beg,end w[filename]：beg-&gt;end内容存储为filename文件<br>!command：暂时离开vi到命令行界面下执行command的显示结果</p>
+<p>括号匹配<br>括号里面执行操作<br>ci’, di’, yi’：修改、剪切或复制’之间的内容。<br>ca’, da’, ya’：修改、剪切或复制’之间的内容，包含’。<br>ci”, di”, yi”：修改、剪切或复制”之间的内容。<br>ca”, da”, ya”：修改、剪切或复制”之间的内容，包含”。<br>ci(, di(, yi(：修改、剪切或复制()之间的内容。<br>ca(, da(, ya(：修改、剪切或复制()之间的内容，包含()。<br>ci[, di[, yi[：修改、剪切或复制[]之间的内容。<br>ca[, da[, ya[：修改、剪切或复制[]之间的内容，包含[]。<br>ci{, di{, yi{：修改、剪切或复制{}之间的内容。<br>ca{, da{, ya{：修改、剪切或复制{}之间的内容，包含{}。<br>ci&lt;, di&lt;, yi&lt;：修改、剪切或复制&lt;&gt;之间的内容。<br>ca&lt;, da&lt;, ya&lt;：修改、剪切或复制&lt;&gt;之间的内容，包含&lt;&gt;。</p>
+<p>编程辅助按键：<br>光标需要在变量上：<br>gd：跳转到局部变量定义处<br>gD：跳转到全局变量定义处，从当前文件开头开始搜索</p>
+<p>[[: 跳转到上一个函数块开始，需要有单独一行的{。<br>]]: 跳转到下一个函数块开始，需要有单独一行的{。<br>[]: 跳转到上一个函数块结束，需要有单独一行的}。<br>][: 跳转到下一个函数块结束，需要有单独一行的}。<br>[{: 跳转到当前块开始处；<br>]}: 跳转到当前块结束处；</p>
+<p>注释块<br>[/: 跳转到当前注释块开始处；<br>]/: 跳转到当前注释块结束处；</p>
+<p>光标一般需要在括号上<br>%: 不仅能移动到匹配的(),{}或[]上，而且能在#if，#else， #endif之间跳跃。</p>
+<p>移动操作<br>num+方向：移动num个字符位置<br>ctrl+f：page down<br>ctrl+b：page up<br>ctrl+d：page up for half<br>ctrl+u：page down for half<br>+：非空白字符下一列<br>-：非空白字符上一列<br>num<space>：后移num个字符距离<br>num<Enter>：下移num行<br>0：当前行首<br>$：当前行尾<br>H：本屏幕首字符<br>M：本屏幕中央首字符<br>L：本屏幕最下方一列首字符<br>G：文件最后一行<br>numG：移动到第num行<br>gg：移动到第一行<br>gj：移动到一段内下一行，屏幕行数一行<br>gk：移动到一段内上一行，屏幕行数一行<br>(：前移一句<br>)：后移一句<br>{：前移一段<br>}：后移一段</p>
+<p>搜索，选择，取代<br>/word：光标之下的word寻找<br>?word：光标之上的word寻找<br>n：重复前一个搜索动作  // 可以理解为next<br>N：反向进行搜索  // pre含义<br>x后向删除，X前向删除<br>numx后向删除num个，numX前向删除num个<br>dd：删除光标所在行<br>numdd：删除光标所在向下num行<br>dnumG：删除光标到第num行数据<br>dG：删除光标到最后一列所有数据<br>d$：删除光标-&gt;行尾数据<br>d0：光标-&gt;行首数据<br>yy：复制当前行<br>num+yy：复制向下num行数据复制<br>y + num + G：复制光标-&gt;num行数据<br>yG：复制光标-&gt;文件尾数据<br>y0：复制光标-&gt;行首数据<br>y$：复制光标-&gt;行尾数据<br>p下一行粘贴P上一行粘贴<br>J：光标所在行与下一行数据结合<br>c：重复删除多个数据<br>u：撤销命令<br>ctrl+r：重做上一个动作<br>.：重复前一个动作<br><em>：向下搜索光标处单词<br>g</em>：向下搜索光标处单词，部分符合即可<br>#：向上搜索光标所在词<br>g#：</p>
+<p>一般模式向编辑模式的切换<br>i当前插入，I第一个非空白字符除插入<br>a当前光标下一个字符插入，A最后一个字符处插入<br>o目前光标所在的下一列处插入新的一列，O目前光标的上一列插入新的一列<br>进入取代模式(replace mode),r取代当前字符一次，R取代当前字符直到退出</p>
+<p>复制粘贴<br>yy 复制游标所在整行<br>y^ / y0 复制至行首，不包含游标<br>y$ 复制至行尾。含光标所在字符</p>
+<p>yw复制一个单词<br>y2w复制两个单词</p>
+<p>yG复制至文本末<br>y1G复制至文本开头</p>
+<p>vim计算器<br>&lt;Ctrl - r&gt; + =输入你的数值，得到结果  // 简单的加减乘除命令</p>
+<p>aw：一个词语word<br>as：一个句子<br>ap：一个段<br>ab：一块block</p>
+<p>执行外部命令<br>:!cmd执行外部cmd命令<br>:!!执行上一次的外部命令<br>:sh调用shell，使用exit返回vim<br>:r！cmd将命令的返回结果插入文件当前位置<br>:m, nw !cmd将文件的m行到n行之间的内容作为命令输入执行命令</p>
+<p>快速修复<br>:copen打开，默认底部打开<br>:vertical copen右侧打开<br>:cclose关闭</p>
+<h2 id="其他相关"><a href="#其他相关" class="headerlink" title="其他相关"></a>其他相关</h2><p>?set hidden</p>
+<p>备份文件相关<br>set nobackup<br>set nowritebackup</p>
+<p>设置命令行高度<br>set cmdheight=2</p>
+<p>设置updatetime(1000ms = 1s), less time, more useful<br>set updatetime=300</p>
+<p>don’t pass messages to |ins-completion-menu|<br>set shortmess+=c</p>
+<p>展示信号列<br>set signcolum=yes</p>
+<h2 id="多行编辑"><a href="#多行编辑" class="headerlink" title="多行编辑"></a>多行编辑</h2><h3 id="添加内容"><a href="#添加内容" class="headerlink" title="添加内容"></a>添加内容</h3><ol>
+<li>将光标移到编辑行</li>
+<li>按下<code>Ctrl</code> + <code>v</code>进入visual block模式</li>
+<li>行移动</li>
+<li><code>I</code>进入编辑模式</li>
+<li>开始输入要插入的内容<code>test_</code></li>
+<li><code>Esc</code>退出（非常重要），Vim刷新内容</li>
+</ol>
+<h3 id="删除内容"><a href="#删除内容" class="headerlink" title="删除内容"></a>删除内容</h3><ol>
+<li>移动修改行</li>
+<li><code>ctrl</code> + <code>v</code>进入visual block模式</li>
+<li>编辑内容</li>
+</ol>

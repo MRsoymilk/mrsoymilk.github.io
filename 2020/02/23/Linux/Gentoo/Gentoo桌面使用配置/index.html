@@ -146,31 +146,31 @@ GRUB_TIME_STYLE=menu  # 显示时间状态条</code></pre><p>更多见配置文�
 <p><em>个人认为没有必要过度美化</em></p>
 <p><em><code>GRUB_TIME_STYLE=menu</code>在没有主题包的加持下无效，可能是其他选项没有配置好。</em></p>
 <h2 id="桌面配置"><a href="#桌面配置" class="headerlink" title="桌面配置"></a>桌面配置</h2><p>参考：<a href="https://tunkshif.github.io/linux/i3-config.html" target="_blank" rel="noopener">桌面环境微科普与 i3 配置记录</a></p>
-<h3 id="i3wm"><a href="#i3wm" class="headerlink" title="i3wm"></a>i3wm</h3><p><img src="desktop.jpg" alt="desktop"></p>
-<p><a href="https://gist.github.com/MRsoymilk/3cc0514e7f75a1e432b1b788bb9fb624" target="_blank" rel="noopener">我的配置文件</a></p>
+<h3 id="i3wm"><a href="#i3wm" class="headerlink" title="i3wm"></a><code>i3wm</code></h3><p><img src="desktop.jpg" alt="desktop"></p>
+<p><a href="https://github.com/MRsoymilk/i3" target="_blank" rel="noopener">我的配置文件</a></p>
 <p>参考：<a href="https://tunkshif.github.io/linux/i3-config.html" target="_blank" rel="noopener">桌面环境微科普与 i3 配置记录</a></p>
-<p>配置 i3wm 需要的工具：</p>
+<p>配置 <code>i3wm</code> 需要的工具：</p>
 <ul>
-<li>按键检测工具<code>xev</code>, keysym 值就是 bindsym 需要</li>
-<li>窗口检测工具<code>xprop</code>，查找窗口名称命令：<code>xprop | grep WM_CLASS</code></li>
+<li>按键检测工具 <code>xev</code>, <code>xev</code> 输出的 <code>keysym</code> 值就是配置文件中 <code>bindsym</code> 需要的值</li>
+<li>窗口检测工具 <code>xprop</code>，查找窗口名称命令：<code>xprop | grep WM_CLASS</code></li>
 </ul>
 <ol>
-<li>i3wm 骨骼：<code>i3-gaps</code>窗口管理器，用来取代<code>xfwm4</code></li>
+<li>窗口管理器：<code>i3-gaps</code></li>
 </ol>
-<p>i3-gaps(相比 i3，添加了窗口之间的间隔)</p>
+<p><code>i3-gaps</code>相比 <code>i3</code>，添加了窗口之间的间隔</p>
 <p>配置可以参考<a href="https://wiki.gentoo.org/wiki/I3" target="_blank" rel="noopener">i3wm Wiki</a></p>
 <p>安装</p>
 <pre><code class="bash">emerge --ask x11-wm/i3-gaps</code></pre>
 <ol start="2">
-<li>状态栏：i3blocks</li>
+<li>状态栏：<code>i3blocks</code></li>
 </ol>
 <p>i3 config 文件中调用</p>
 <pre><code class="bash">emerge --ask x11-misc/i3blocks</code></pre>
 <ol start="3">
-<li>锁屏：i3lock</li>
+<li>锁屏：<code>i3lock</code></li>
 </ol>
-<p><code>i3lock</code>默认：白色屏幕，输入密码，回车重新进入，图像仅仅支持 png 格式而且不支持缩放</p>
-<p>利用 convert 随意配置了一个锁屏图像</p>
+<p><code>i3lock</code>默认：白色屏幕，输入密码，回车重新进入，图像仅仅支持 <code>png</code> 格式而且不支持缩放</p>
+<p>利用 <code>convert</code> 随意配置了一个像素版本的锁屏图像</p>
 <pre><code class="bash">convert pic.xxx pic.png  # 转格式
 convert -scale 10% pic.png -scale 1000% pic.png  # 缩小10倍放大十倍制造像素效果
 convert -modulate 50% pic.png pic.png  # 降低亮度
@@ -198,9 +198,10 @@ i3lock -i path/to/your/pic.png  # 命令行锁屏，可在i3 config文件中调�
 <li>如果你选择手写配置文件，那么..</li>
 </ul>
 <p>主题文件放置：</p>
-<pre><code>图标主题： ~/.local/share/icons/
+<pre><code class="code">图标主题： ~/.local/share/icons/
 窗体主题：~/.local/share/themes/
-鼠标主题：~/.icon/</code></pre><p>使用 xfce4-appearance-settings 指定主题，但是对于在 i3wm 中使用，你还要修改配置文件。</p>
+鼠标主题：~/.icon/</code></pre>
+<p>使用 <code>xfce4-appearance-settings</code> 指定主题，但是对于在 <code>i3wm</code> 中使用，你还要修改配置文件。</p>
 <p>对于 GTK+ 2.x</p>
 <p>参考：<a href="https://faq.i3wm.org/question/115/how-to-configure-gtk-theme-support/%3C/p%3E.html" target="_blank" rel="noopener">How to configure GTK theme support?</a></p>
 <p><strong>测试 GTK+ 3.x 可行</strong></p>
@@ -267,7 +268,7 @@ fi</code></pre>
 <pre><code class="bash">emerge --ask x11-misc/dunst</code></pre>
 <h2 id="neofetch-配置"><a href="#neofetch-配置" class="headerlink" title="neofetch 配置"></a>neofetch 配置</h2><p><code>~/.config/neofetch/config</code>文件根据提示配置</p>
 <p><a href="https://github.com/MRsoymilk/warehouse/neofetch" target="_blank" rel="noopener">我的 neofetch</a></p>
-<h2 id="音乐播放器-cmus"><a href="#音乐播放器-cmus" class="headerlink" title="音乐播放器 cmus"></a>音乐播放器 cmus</h2><p>主题设置</p>
+<h2 id="音乐播放器-cmus"><a href="#音乐播放器-cmus" class="headerlink" title="音乐播放器 cmus"></a>音乐播放器 <code>cmus</code></h2><p>主题设置</p>
 <pre><code>:colorscheme gruvbox</code></pre><p>更多主题设置在<code>/usr/share/cmus</code>文件中</p>
 <p>基本使用</p>
 <table>
@@ -310,9 +311,9 @@ fi</code></pre>
 <td>音量-10%</td>
 </tr>
 </tbody></table>
-<h2 id="视频播放器-mpv"><a href="#视频播放器-mpv" class="headerlink" title="视频播放器 mpv"></a>视频播放器 mpv</h2><p><a href="https://wiki.gentoo.org/wiki/Mpv" target="_blank" rel="noopener">mpv Wiki</a></p>
+<h2 id="视频播放器-mpv"><a href="#视频播放器-mpv" class="headerlink" title="视频播放器 mpv"></a>视频播放器 <code>mpv</code></h2><p><a href="https://wiki.gentoo.org/wiki/Mpv" target="_blank" rel="noopener">mpv Wiki</a></p>
 <p>基本使用</p>
-<p><strong>mpv支持鼠标</strong></p>
+<p><strong>mpv 支持鼠标</strong></p>
 <table>
 <thead>
 <tr>
@@ -385,8 +386,8 @@ eval &quot;$(dbus-launch --sh-syntax --exit-with-session)&quot;</code></pre><ol 
 <li>Fcitx GUI 配置工具</li>
 </ol>
 <ul>
-<li>依赖 GTK2 或 GTK3 的 fcitx-configtool</li>
-<li>依赖 KDE 的 kcm-fcitx</li>
+<li>依赖 GTK2 或 GTK3 的 <code>fcitx-configtool</code></li>
+<li>依赖 KDE 的 <code>kcm-fcitx</code></li>
 </ul>
 <p>我选择<code>fcitx-configtool</code></p>
 <pre><code class="bash">emerge --ask app-i18n/fcitx-configtool</code></pre>
@@ -457,6 +458,9 @@ ntpd -q -g</code></pre>
     
       <li><a href="#livere">LiveRe</a></li>
     
+    
+      <li><a href="#valine">Valine</a></li>
+    
   </ul>
   
   
@@ -464,7 +468,7 @@ ntpd -q -g</code></pre>
       
         
         <!--PC和WAP自适应版-->
-        <div id="SOHUCS" ></div>
+        <div id="SOHUCS"></div>
         <script type="text/javascript">
         (function(){
         var appid = "cyuGH4lBk";
@@ -505,6 +509,18 @@ ntpd -q -g</code></pre>
         
     </div>
   
+  
+  
+    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+    <div id="vcomments"></div>
+    <script>
+      new Valine({
+        el: '#vcomments',
+        appId: theme.valine.appid,
+        appKey: theme.valine.appKey
+      })
+    </script>
+   
 </div>
   </div>
 </div>

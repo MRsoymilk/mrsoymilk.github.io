@@ -90,7 +90,7 @@
   <div class="progress-container">
     <div class="progress-bar" id="bar"></div>
   </div>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#写在前面"><span class="toc-text">写在前面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#终端调用摄像机"><span class="toc-text">终端调用摄像机</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#连接摄像模块"><span class="toc-text">连接摄像模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#raspistill-使用"><span class="toc-text">raspistill 使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#raspivid-使用"><span class="toc-text">raspivid 使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OpenCV调用CSI摄像头"><span class="toc-text">OpenCV调用CSI摄像头</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#写在前面"><span class="toc-text">写在前面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#终端调用摄像机"><span class="toc-text">终端调用摄像机</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#连接摄像模块"><span class="toc-text">连接摄像模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#raspistill-使用"><span class="toc-text">raspistill 使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#raspivid-使用"><span class="toc-text">raspivid 使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OpenCV调用CSI摄像头"><span class="toc-text">OpenCV调用CSI摄像头</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Python库Picamera"><span class="toc-text">Python库Picamera</span></a></li></ol>
 </div>
 
 <div class="post-content" id="post-content">
@@ -112,8 +112,8 @@
       
           <li>&gt;</li>
           <li>
-            <a href="/categories/硬件/Raspberry-Pi/">
-          Raspberry Pi
+            <a href="/categories/硬件/Pi/">
+          Pi
         </a>
           </li>
       
@@ -134,17 +134,32 @@
 <li><a href="https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspivid.md" target="_blank" rel="noopener">raspivid</a></li>
 </ul>
 <h3 id="连接摄像模块"><a href="#连接摄像模块" class="headerlink" title="连接摄像模块"></a>连接摄像模块</h3><p><img src="camera.jpg" alt="camera"><br>设置 -&gt; <code>enable camera</code>，开启摄像机</p>
-<h3 id="raspistill-使用"><a href="#raspistill-使用" class="headerlink" title="raspistill 使用"></a>raspistill 使用</h3><pre><code>raspistill -o ./Desktop/img.jpg</code></pre><p>拍摄一张相片，存放在 Desktop 下(路径)，名称为 img.jpg<br>垂直反转命令<code>-vf</code>, 水平翻转命令<code>-hf</code>，可同时使用</p>
-<h3 id="raspivid-使用"><a href="#raspivid-使用" class="headerlink" title="raspivid 使用"></a>raspivid 使用</h3><pre><code>raspivid -o video.h264</code></pre><p>拍摄一段视频，保存为 video.h264<br>视频长度控制：<code>-t</code>毫秒单位。例：<code>raspivid -o video.h264 -t 10000</code></p>
+<h3 id="raspistill-使用"><a href="#raspistill-使用" class="headerlink" title="raspistill 使用"></a>raspistill 使用</h3><pre><code class="bash">raspistill -o ./Desktop/img.jpg</code></pre>
+<p>拍摄一张相片，存放在 Desktop 下(路径)，名称为 img.jpg<br>垂直反转命令<code>-vf</code>, 水平翻转命令<code>-hf</code>，可同时使用</p>
+<h3 id="raspivid-使用"><a href="#raspivid-使用" class="headerlink" title="raspivid 使用"></a>raspivid 使用</h3><pre><code class="bash">raspivid -o video.h264</code></pre>
+<p>拍摄一段视频，保存为 video.h264<br>视频长度控制：<code>-t</code>毫秒单位。例：<code>raspivid -o video.h264 -t 10000</code></p>
 <p>个人测试：树莓派开启后再插入摄像头模块将无法检测到，重启即可</p>
 <hr>
 
 <h2 id="OpenCV调用CSI摄像头"><a href="#OpenCV调用CSI摄像头" class="headerlink" title="OpenCV调用CSI摄像头"></a>OpenCV调用CSI摄像头</h2><p>OpenCV 使用 VideoCapture(0)调用 CSI 摄像头，无报错，无数据。</p>
 <blockquote>
-<p>这是因为树莓派中的 camera module 是放在/boot/目录中以固件形式加载的，不是一个标准的 V4L2 的摄像头驱动，所以加载起来之后会找不到/dev/video0 的设备节点。我们在/etc/modules 里面添加一行 bcm2835-v4l2（小写的 L）就能解决问题。<br>参考资料：<a href="https://blog.csdn.net/Deiki/article/details/71123947" target="_blank" rel="noopener">【树莓派】在 OpenCV 中调用 CSI 摄像头</a></p>
+<p>这是因为树莓派中的 camera module 是放在/boot/目录中以固件形式加载的，不是一个标准的 V4L2 的摄像头驱动，所以加载起来之后会找不到/dev/video0 的设备节点。我们在/etc/modules 里面添加一行 bcm2835-v4l2（小写的 L）就能解决问题。</p>
+</blockquote>
+<blockquote>
+<p>参考资料：<a href="https://blog.csdn.net/Deiki/article/details/71123947" target="_blank" rel="noopener">【树莓派】在 OpenCV 中调用 CSI 摄像头</a></p>
 </blockquote>
 <p>修改文件/etc/modules</p>
 <p>在文件中添加一行<code>bcm2835-v4l2</code><br><strong>注意：是小写的 L，不是 1，如果是 1 可能导致无法正常启动</strong></p>
+<h2 id="Python库Picamera"><a href="#Python库Picamera" class="headerlink" title="Python库Picamera"></a>Python库Picamera</h2><p>参考：<a href="https://picamera.readthedocs.io/en/release-1.13/" target="_blank" rel="noopener">Picamera</a></p>
+<pre><code class="python3">from time import sleep
+from picamera import PiCamera
+
+camera = PiCamera()
+camera.resolution = (1024, 768)
+camera.start_preview()
+# Camera warm-up time
+sleep(2)
+camera.capture(&#39;foo.jpg&#39;)</code></pre>
 
     
     <hr>
@@ -171,6 +186,9 @@
     
       <li><a href="#livere">LiveRe</a></li>
     
+    
+      <li><a href="#valine">Valine</a></li>
+    
   </ul>
   
   
@@ -178,7 +196,7 @@
       
         
         <!--PC和WAP自适应版-->
-        <div id="SOHUCS" ></div>
+        <div id="SOHUCS"></div>
         <script type="text/javascript">
         (function(){
         var appid = "cyuGH4lBk";
@@ -219,6 +237,18 @@
         
     </div>
   
+  
+  
+    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+    <div id="vcomments"></div>
+    <script>
+      new Valine({
+        el: '#vcomments',
+        appId: theme.valine.appid,
+        appKey: theme.valine.appKey
+      })
+    </script>
+   
 </div>
   </div>
 </div>
