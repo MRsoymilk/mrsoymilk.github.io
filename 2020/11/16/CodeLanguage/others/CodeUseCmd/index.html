@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Windows 10 消失的桌面图标 [ Soymilk ]</title>
+  <title>编程语言调用命令行操作 [ Soymilk ]</title>
   
 <link rel="shortcut icon" href="/favicon/favicon.ico">
 
@@ -85,16 +85,16 @@
   <div class="milk-body">
     
 <div class="draggable-toc">
-  <div class="toc-title">Windows 10 消失的桌面图标</div>
+  <div class="toc-title">编程语言调用命令行操作</div>
   <p>process: <span>0</span></p>
   <div class="progress-container">
     <div class="progress-bar" id="bar"></div>
   </div>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#写在前面"><span class="toc-text">写在前面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决方法"><span class="toc-text">解决方法</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#写在前面"><span class="toc-text">写在前面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Python"><span class="toc-text">Python</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C"><span class="toc-text">C</span></a></li></ol>
 </div>
 
 <div class="post-content" id="post-content">
-  <div id="top">Windows 10 消失的桌面图标</div>
+  <div id="top">编程语言调用命令行操作</div>
   <div class="post">
     
     <div class="content-categories">
@@ -105,14 +105,14 @@
         
           <li>&gt;</li>
           <li>
-            <a href="/categories/Windows/">
-          Windows
+            <a href="/categories/编程语言/">
+          编程语言
         </a>
           </li>
       
           <li>&gt;</li>
           <li>
-            <a href="/categories/Windows/others/">
+            <a href="/categories/编程语言/others/">
           others
         </a>
           </li>
@@ -122,11 +122,34 @@
     </div>
     <hr>
     
-    <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>Windows 10 系统电脑桌面图标全部消失，右击只有<code>显示桌面图标</code>，然而并没有什么用。桌面不能点点点可怎么活，还好重启<code>Windows资源管理器</code>能解决。</p>
+    <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>使用语言</p>
+<ul>
+<li>Python</li>
+<li>C</li>
+</ul>
+<p>可执行文件<code>hello.sh</code>:</p>
+<pre><code class="bash">#!/bin/bash
+echo &quot;hello my friend&quot;</code></pre>
+<p>不要忘记赋予<code>hello.sh</code>执行权限</p>
 <a id="more"></a>
 
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>*<em>启动任务管理器: *</em><br><code>Ctrl</code> + <code>Alt</code> + <code>Delete</code> 勾选任务管理器<br>任务栏右击选择任务管理器</p>
-<p><img src="windows.png" alt="restart"></p>
+<h2 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h2><p>Python文件</p>
+<pre><code class="python">import os
+os.system(&quot;./hello.sh&quot;)
+os.system(&quot;echo %s&quot; % (&#39;hello&#39;))</code></pre>
+<p>结果:</p>
+<pre><code class="bash">hello my friend
+hello</code></pre>
+<h2 id="C"><a href="#C" class="headerlink" title="C"></a>C</h2><p>使用C库函数 <code>int system(const char *command)</code></p>
+<p>C文件</p>
+<pre><code class="C">#include &lt;stdlib.h&gt;
+
+int main(int argc, char *argv[]){
+  system(&quot;./hello.sh&quot;);
+  return 0;
+}</code></pre>
+<p>结果:</p>
+<pre><code class="bash">hello my friend</code></pre>
 
     
     <hr>
@@ -135,8 +158,8 @@
       <i class="fa fa-tags"></i>
       <ul>
         
-        <li><a href="/tags/Windows/">
-          Windows
+        <li><a href="/tags/others/">
+          others
         </a></li>
       
       </ul>

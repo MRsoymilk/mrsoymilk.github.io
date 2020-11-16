@@ -90,7 +90,7 @@
   <div class="progress-container">
     <div class="progress-bar" id="bar"></div>
   </div>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#写在前面"><span class="toc-text">写在前面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#终端调用摄像机"><span class="toc-text">终端调用摄像机</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#连接摄像模块"><span class="toc-text">连接摄像模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#raspistill-使用"><span class="toc-text">raspistill 使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#raspivid-使用"><span class="toc-text">raspivid 使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OpenCV调用CSI摄像头"><span class="toc-text">OpenCV调用CSI摄像头</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Python库Picamera"><span class="toc-text">Python库Picamera</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#写在前面"><span class="toc-text">写在前面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用Raspberry官方CSI摄像头"><span class="toc-text">使用Raspberry官方CSI摄像头</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#终端调用摄像机"><span class="toc-text">终端调用摄像机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#连接摄像模块"><span class="toc-text">连接摄像模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#raspistill-使用"><span class="toc-text">raspistill 使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#raspivid-使用"><span class="toc-text">raspivid 使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OpenCV调用CSI摄像头"><span class="toc-text">OpenCV调用CSI摄像头</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Python库Picamera"><span class="toc-text">Python库Picamera</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用通过USB连接的普通摄像头"><span class="toc-text">使用通过USB连接的普通摄像头</span></a></li></ol>
 </div>
 
 <div class="post-content" id="post-content">
@@ -127,7 +127,7 @@
 
 <hr>
 
-<h2 id="终端调用摄像机"><a href="#终端调用摄像机" class="headerlink" title="终端调用摄像机"></a>终端调用摄像机</h2><p>通过<code>raspistill</code>拍摄照片<br>通过<code>raspivid</code>拍摄视频</p>
+<h2 id="使用Raspberry官方CSI摄像头"><a href="#使用Raspberry官方CSI摄像头" class="headerlink" title="使用Raspberry官方CSI摄像头"></a>使用Raspberry官方CSI摄像头</h2><h3 id="终端调用摄像机"><a href="#终端调用摄像机" class="headerlink" title="终端调用摄像机"></a>终端调用摄像机</h3><p>通过<code>raspistill</code>拍摄照片<br>通过<code>raspivid</code>拍摄视频</p>
 <p>参考</p>
 <ul>
 <li><a href="https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspistill.md" target="_blank" rel="noopener">raspistill</a></li>
@@ -160,7 +160,7 @@ camera.start_preview()
 # Camera warm-up time
 sleep(2)
 camera.capture(&#39;foo.jpg&#39;)</code></pre>
-
+<h2 id="使用通过USB连接的普通摄像头"><a href="#使用通过USB连接的普通摄像头" class="headerlink" title="使用通过USB连接的普通摄像头"></a>使用通过USB连接的普通摄像头</h2>
     
     <hr>
     <div class="content-tags">

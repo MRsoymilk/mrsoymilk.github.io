@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>OpenCV学习之启航 [ Soymilk ]</title>
+  <title>OpenCV显示一张图片 [ Soymilk ]</title>
   
 <link rel="shortcut icon" href="/favicon/favicon.ico">
 
@@ -85,7 +85,7 @@
   <div class="milk-body">
     
 <div class="draggable-toc">
-  <div class="toc-title">OpenCV学习之启航</div>
+  <div class="toc-title">OpenCV显示一张图片</div>
   <p>process: <span>0</span></p>
   <div class="progress-container">
     <div class="progress-bar" id="bar"></div>
@@ -94,7 +94,7 @@
 </div>
 
 <div class="post-content" id="post-content">
-  <div id="top">OpenCV学习之启航</div>
+  <div id="top">OpenCV显示一张图片</div>
   <div class="post">
     
     <div class="content-categories">
@@ -125,7 +125,7 @@ int main(){
 }</code></pre>
 <a id="more"></a>
 
-<h3 id="代码解释"><a href="#代码解释" class="headerlink" title="代码解释"></a>代码解释</h3><pre><code>`#include &lt;opencv2/opencv.hpp&gt;`：
+<h3 id="代码解释"><a href="#代码解释" class="headerlink" title="代码解释"></a>代码解释</h3><pre><code class="CPP">`#include &lt;opencv2/opencv.hpp&gt;`：
         类型：OpenCV头文件
         功能：包含了所有的OpenCV
         说明：一次引入，后续无忧🎉
@@ -146,7 +146,8 @@ int main(){
 `waitKey`：
         类型：OpenCV函数
         功能：等待按键
-        说明：0表示永久等待，正数表示毫米级时间，负数效果和0一样(个人测试结果)</code></pre><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="窗口命名"><a href="#窗口命名" class="headerlink" title="窗口命名"></a>窗口命名</h3><p><code>namedWindow</code>:<br>cv::namedWindow(“windows name”, 窗口参数)</p>
+        说明：0表示永久等待，正数表示毫米级时间，负数效果和0一样(个人测试结果)</code></pre>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="窗口命名"><a href="#窗口命名" class="headerlink" title="窗口命名"></a>窗口命名</h3><p><code>namedWindow</code>:<br>cv::namedWindow(“windows name”, 窗口参数)</p>
 <p><strong>窗口参数</strong>:</p>
 <ul>
 <li>WINDOW_AUTOSIZE: 窗口自适应图片。(默认属性)</li>
