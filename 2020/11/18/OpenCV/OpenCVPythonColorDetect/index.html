@@ -90,7 +90,7 @@
   <div class="progress-container">
     <div class="progress-bar" id="bar"></div>
   </div>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实现"><span class="toc-text">实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结果"><span class="toc-text">结果</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#图像着色"><span class="toc-text">图像着色</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结果"><span class="toc-text">结果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实时颜色检测"><span class="toc-text">实时颜色检测</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结果-1"><span class="toc-text">结果</span></a></li></ol>
 </div>
 
 <div class="post-content" id="post-content">
@@ -116,20 +116,18 @@
     <hr>
     
     <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
-<li><p><a href="https://zhuanlan.zhihu.com/p/32269942" target="_blank" rel="noopener">用色彩空间做图像处理，让颜色提取更高效</a></p>
-</li>
-<li><p><a href="https://docs.opencv.org/3.4/d4/d73/tutorial_py_contours_begin.html" target="_blank" rel="noopener">Contours : Getting Started</a></p>
-</li>
-<li><p><a href="https://docs.opencv.org/3.4/d3/dc0/group__imgproc__shape.html#ga95f5b48d01abc7c2e0732db24689837b" target="_blank" rel="noopener">Structural Analysis and Shape Descriptors</a></p>
-</li>
+<li><a href="https://zhuanlan.zhihu.com/p/32269942" target="_blank" rel="noopener">用色彩空间做图像处理，让颜色提取更高效</a></li>
+<li><a href="https://docs.opencv.org/3.4/d4/d73/tutorial_py_contours_begin.html" target="_blank" rel="noopener">Contours : Getting Started</a></li>
+<li><a href="https://docs.opencv.org/3.4/d3/dc0/group__imgproc__shape.html#ga95f5b48d01abc7c2e0732db24689837b" target="_blank" rel="noopener">Structural Analysis and Shape Descriptors</a></li>
+<li><a href="https://www.geeksforgeeks.org/multiple-color-detection-in-real-time-using-python-opencv/" target="_blank" rel="noopener">Multiple Color Detection in Real-Time using Python-OpenCV</a></li>
 </ul>
+<p>使用HSV（色相Hue, 饱和度Saturation, 明亮度Value, 有时也称为Brightness）色彩空间。HSV将颜色信息与亮度信息分开，减小了光线对特定颜色识别的影响。</p>
+<p><img src="./hsv_color.png" alt="HSV color"></p>
 <a id="more"></a>
 
-<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>使用HSV（色相Hue, 饱和度Saturation, 明亮度Value, 有时也称为Brightness）色彩空间。HSV将颜色信息与亮度信息分开，减小了光线对特定颜色识别的影响。</p>
-<p><img src="./hsv_color.png" alt="HSV color"></p>
 <p>颜色阈值参考</p>
 <p><img src="./color.jpg" alt="Color quantization strategy in HSV space"></p>
-<p>提取蓝色：H通道选取100~124，S通道选取43~255，V通道选取35~255。</p>
+<h2 id="图像着色"><a href="#图像着色" class="headerlink" title="图像着色"></a>图像着色</h2><p>提取蓝色：H通道选取100~124，S通道选取43~255，V通道选取35~255。</p>
 <p>提取绿色：H通道选取35~77，S通道选取43~255，V通道选取35~255。</p>
 <p>提取红色：H通道选取156~180和0~10（可能需要做两次运算，取相加结果），S通道选取43~255，V通道选取35~255。</p>
 <p>实现代码:</p>
@@ -139,16 +137,16 @@ import cv2
 img = cv2.imread(&quot;./ball.jpg&quot;)
 img_hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 
-blue_lower = np.array([100, 43, 35]) 
+blue_lower = np.array([100, 43, 35])
 blue_higher = np.array([124, 255, 255])
 
-green_lower = np.array([35, 43, 35]) 
-green_higher = np.array([77, 255, 255]) 
+green_lower = np.array([35, 43, 35])
+green_higher = np.array([77, 255, 255])
 
-red_lower_1 = np.array([0, 43, 35]) 
-red_higher_1 = np.array([10, 255, 255]) 
-red_lower_2 = np.array([156, 43, 35]) 
-red_higher_2 = np.array([180, 255, 255]) 
+red_lower_1 = np.array([0, 43, 35])
+red_higher_1 = np.array([10, 255, 255])
+red_lower_2 = np.array([156, 43, 35])
+red_higher_2 = np.array([180, 255, 255])
 
 blue_part = cv2.inRange(img_hsv, blue_lower, blue_higher)
 green_part = cv2.inRange(img_hsv, green_lower, green_higher)
@@ -177,6 +175,99 @@ cv2.imshow(&#39;original&#39;, img)
 
 cv2.waitKey(0)</code></pre>
 <h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="./result.png" alt="result"></p>
+<h2 id="实时颜色检测"><a href="#实时颜色检测" class="headerlink" title="实时颜色检测"></a>实时颜色检测</h2><p>由于摄像头的原因，红色可能检测不太准确（偏橘色），根据个人情况更改。</p>
+<p>实现代码:</p>
+<pre><code class="python">import numpy as np
+import cv2
+
+capture = cv2.VideoCapture(0)
+
+red_lower_1 = np.array([150, 50, 35], np.uint8)
+red_upper_1 = np.array([190, 255, 255], np.uint8)
+red_lower_2 = np.array([0, 50, 35], np.uint8)
+red_upper_2 = np.array([15, 255, 255], np.uint8)
+
+green_lower = np.array([30, 50, 35], np.uint8)
+green_upper = np.array([80, 255, 255], np.uint8)
+
+blue_lower = np.array([90, 50, 35], np.uint8)
+blue_upper = np.array([130, 255, 255], np.uint8)
+
+AREA = 2500  # 50x50
+
+while True:
+    _, frame = capture.read()
+    hsv_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+
+    red_mask_1 = cv2.inRange(hsv_frame, red_lower_1, red_upper_1)
+    red_mask_2 = cv2.inRange(hsv_frame, red_lower_2, red_upper_2)
+    green_mask = cv2.inRange(hsv_frame, green_lower, green_upper)
+    blue_mask = cv2.inRange(hsv_frame, blue_lower, blue_upper)
+
+    # 腐蚀膨胀卷积核
+    kernel = np.ones((5, 5), &quot;uint8&quot;)
+
+    # 红色
+    red_mask_1 = cv2.erode(red_mask_1, kernel)
+    red_mask_1 = cv2.dilate(red_mask_1, kernel)
+    res_red_1 = cv2.bitwise_and(frame, frame, mask=red_mask_1)
+    red_mask_2 = cv2.erode(red_mask_2, kernel)
+    red_mask_2 = cv2.dilate(red_mask_2, kernel)
+    res_red_2 = cv2.bitwise_and(frame, frame, mask=red_mask_2)
+
+    # 绿色
+    green_mask = cv2.erode(green_mask, kernel)
+    green_mask = cv2.dilate(green_mask, kernel)
+    res_green = cv2.bitwise_and(frame, frame, mask=green_mask)
+
+    # For blue color
+    blue_mask = cv2.erode(blue_mask, kernel)
+    blue_mask = cv2.dilate(blue_mask, kernel)
+    res_blue = cv2.bitwise_and(frame, frame, mask=blue_mask)
+
+    # 画红色边框
+    contours, _ = cv2.findContours(red_mask_1, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+    for pic, contour in enumerate(contours):
+        area = cv2.contourArea(contour)
+        if(area &gt; AREA):
+            x, y, w, h = cv2.boundingRect(contour)
+            frame = cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 0, 255), 2)
+            cv2.putText(frame, &quot;Red&quot;, (x, y), cv2.FONT_HERSHEY_SIMPLEX, 1.0, (0, 0, 255))
+
+    contours, _ = cv2.findContours(red_mask_2, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+    for pic, contour in enumerate(contours):
+        area = cv2.contourArea(contour)
+        if(area &gt; AREA):
+            x, y, w, h = cv2.boundingRect(contour)
+            frame = cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 0, 255), 2)
+            cv2.putText(frame, &quot;Red&quot;, (x, y), cv2.FONT_HERSHEY_SIMPLEX, 1.0, (0, 0, 255))
+
+    # 画绿色边框
+    contours, _ = cv2.findContours(green_mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+    for pic, contour in enumerate(contours):
+        area = cv2.contourArea(contour)
+        if(area &gt; AREA):
+            x, y, w, h = cv2.boundingRect(contour)
+            frame = cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
+            cv2.putText(frame, &quot;Green&quot;, (x, y), cv2.FONT_HERSHEY_SIMPLEX, 1.0, (0, 255, 0))
+
+    # 画蓝色边框
+    contours, _ = cv2.findContours(blue_mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+    for pic, contour in enumerate(contours):
+        area = cv2.contourArea(contour)
+        if(area &gt; AREA):
+            x, y, w, h = cv2.boundingRect(contour)
+            frame = cv2.rectangle(frame, (x, y), (x + w, y + h), (255, 0, 0), 2)
+            cv2.putText(frame, &quot;Blue&quot;, (x, y), cv2.FONT_HERSHEY_SIMPLEX, 1.0, (255, 0, 0))
+
+    # 释放资源
+    cv2.imshow(&quot;color detect&quot;, frame)
+    if cv2.waitKey(10) &amp; 0xFF == ord(&#39;q&#39;):
+        break
+
+capture.release()
+cv2.destroyAllWindows()</code></pre>
+<h2 id="结果-1"><a href="#结果-1" class="headerlink" title="结果"></a>结果</h2><p><img src="color_detect.jpg" alt="result"></p>
 
     
     <hr>

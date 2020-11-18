@@ -90,7 +90,7 @@
   <div class="progress-container">
     <div class="progress-bar" id="bar"></div>
   </div>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#问题"><span class="toc-text">问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SSH未知终端"><span class="toc-text">SSH未知终端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SSH服务安装"><span class="toc-text">SSH服务安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#apt报错"><span class="toc-text">apt报错</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ubuntu-Snap-报错"><span class="toc-text">Ubuntu Snap 报错</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ubuntu-更改tty界面字体大小"><span class="toc-text">Ubuntu 更改tty界面字体大小</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#apt使用-rpm包"><span class="toc-text">apt使用.rpm包</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#问题"><span class="toc-text">问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SSH未知终端"><span class="toc-text">SSH未知终端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SSH服务安装"><span class="toc-text">SSH服务安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#apt报错"><span class="toc-text">apt报错</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ubuntu-Snap-报错"><span class="toc-text">Ubuntu Snap 报错</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ubuntu-更改tty界面字体大小"><span class="toc-text">Ubuntu 更改tty界面字体大小</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#apt使用-rpm包"><span class="toc-text">apt使用.rpm包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CentOS大多软件包不能找到"><span class="toc-text">CentOS大多软件包不能找到</span></a></li></ol>
 </div>
 
 <div class="post-content" id="post-content">
@@ -129,6 +129,7 @@
 <li>Ubuntu Snap 报错: <code>error: cannot install &quot;douban-fm&quot;: snap &quot;core&quot; has changes in progress</code></li>
 <li>Ubuntu 更改tty界面字体大小</li>
 <li>apt使用<code>.rpm</code>包</li>
+<li>CentOS大多软件包不能找到</li>
 </ul>
 <a id="more"></a>
 
@@ -172,6 +173,9 @@ sudo snap remove &lt;snap name&gt;      # 删除已安装的snap包</code></pre>
 <pre><code class="bash">sudo apt install alien</code></pre>
 <p>转换:</p>
 <pre><code class="bash">alien --scripts name.rpm</code></pre>
+<h2 id="CentOS大多软件包不能找到"><a href="#CentOS大多软件包不能找到" class="headerlink" title="CentOS大多软件包不能找到"></a>CentOS大多软件包不能找到</h2><p>需要启用EPEL</p>
+<pre><code class="bash">sudo yum install epel-release
+sudo yum update</code></pre>
 
     
     <hr>
