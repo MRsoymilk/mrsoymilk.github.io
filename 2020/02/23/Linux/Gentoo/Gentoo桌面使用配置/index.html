@@ -130,12 +130,13 @@
 <li>修改文件<code>/etc/default/gruv</code></li>
 </ol>
 <p>与外观相关的配置</p>
-<pre><code>GRUB_DISTRIBUTOR=&quot;Gentoo&quot;  # 发行版本
-GRUB_GFXMODE=&quot;1920X1080x32&quot;  # 屏幕分辨率
+<pre><code class="bash">GRUB_DISTRIBUTOR=&quot;Gentoo&quot;  # 发行版本
+GRUB_GFXMODE=1920x1080x32  # 屏幕分辨率
 GRUB_GFXPAYLOAD_LINUX=&quot;keep&quot;  # 保持分辨率， 默认情况是文字先大后小，比较突兀
 GRUB_BACKGROUND=&quot;/boot/grub/gentoo.png&quot;  # 添加背景，这样比较有格调
 GRUB_THEME=&quot;/boot/grub/themes/your_theme_file/theme.txt&quot;  # 接入主题包，Gentoo默认主题为starfield星空主题(个人感觉不是很好)
-GRUB_TIME_STYLE=menu  # 显示时间状态条</code></pre><p>更多见配置文件</p>
+GRUB_TIME_STYLE=menu  # 显示时间状态条</code></pre>
+<p>更多见配置文件</p>
 <ol start="2">
 <li>修改文件完成后需要生成新的配置文件</li>
 </ol>
