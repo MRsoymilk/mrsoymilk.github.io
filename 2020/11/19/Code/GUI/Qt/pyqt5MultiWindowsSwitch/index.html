@@ -90,7 +90,7 @@
   <div class="progress-container">
     <div class="progress-bar" id="bar"></div>
   </div>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#效果"><span class="toc-text">效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基于QDialog的窗口切换"><span class="toc-text">基于QDialog的窗口切换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基于QWidget的窗口切换"><span class="toc-text">基于QWidget的窗口切换</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#写在前面"><span class="toc-text">写在前面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基于QDialog的窗口切换"><span class="toc-text">基于QDialog的窗口切换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基于QWidget的窗口切换"><span class="toc-text">基于QWidget的窗口切换</span></a></li></ol>
 </div>
 
 <div class="post-content" id="post-content">
@@ -105,14 +105,21 @@
         
           <li>&gt;</li>
           <li>
-            <a href="/categories/GUI/">
+            <a href="/categories/Code/">
+          Code
+        </a>
+          </li>
+      
+          <li>&gt;</li>
+          <li>
+            <a href="/categories/Code/GUI/">
           GUI
         </a>
           </li>
       
           <li>&gt;</li>
           <li>
-            <a href="/categories/GUI/Qt/">
+            <a href="/categories/Code/GUI/Qt/">
           Qt
         </a>
           </li>
@@ -122,7 +129,14 @@
     </div>
     <hr>
     
-    <h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><p><img src="./switch.png" alt=""></p>
+    <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>实现方式:</p>
+<ul>
+<li>QDialog</li>
+<li>QWidget</li>
+</ul>
+<p><img src="./switch.png" alt="switch"></p>
+<a id="more"></a>
+
 <h2 id="基于QDialog的窗口切换"><a href="#基于QDialog的窗口切换" class="headerlink" title="基于QDialog的窗口切换"></a>基于QDialog的窗口切换</h2><pre><code class="python">import sys
 
 from PyQt5.QtWidgets import QDialog, QWidget, QPushButton, QGridLayout, QLabel, QApplication
