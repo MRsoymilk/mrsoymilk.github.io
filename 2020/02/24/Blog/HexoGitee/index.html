@@ -90,7 +90,7 @@
   <div class="progress-container">
     <div class="progress-bar" id="bar"></div>
   </div>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#写在前面"><span class="toc-text">写在前面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Gitee-上的部署"><span class="toc-text">Gitee 上的部署</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#文件配置"><span class="toc-text">文件配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Gitee-Pages-服务"><span class="toc-text">Gitee Pages 服务</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#后续操作"><span class="toc-text">后续操作</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#写在前面"><span class="toc-text">写在前面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Gitee-上的部署"><span class="toc-text">Gitee 上的部署</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#文件配置"><span class="toc-text">文件配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Gitee-Pages-服务"><span class="toc-text">Gitee Pages 服务</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#后续操作"><span class="toc-text">后续操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用-config选项"><span class="toc-text">使用--config选项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#比较麻烦的操作"><span class="toc-text">比较麻烦的操作</span></a></li></ol></li></ol>
 </div>
 
 <div class="post-content" id="post-content">
@@ -141,7 +141,10 @@
 <p><img src="config_deploy.png" alt="`_config.yml`"></p>
 <h3 id="Gitee-Pages-服务"><a href="#Gitee-Pages-服务" class="headerlink" title="Gitee Pages 服务"></a>Gitee Pages 服务</h3><p>在本地使用了<code>hexo deploy</code>之后，登录你的<code>Gitee</code>，手动更新。</p>
 <p><img src="GiteePages.png" alt="`Gitee Pages`"></p>
-<h2 id="后续操作"><a href="#后续操作" class="headerlink" title="后续操作"></a>后续操作</h2><p>为了实现<code>Gitee</code>和<code>Github</code>的部署，我是用了两份配置文件的方法。</p>
+<h2 id="后续操作"><a href="#后续操作" class="headerlink" title="后续操作"></a>后续操作</h2><h3 id="使用-config选项"><a href="#使用-config选项" class="headerlink" title="使用--config选项"></a>使用<code>--config</code>选项</h3><p>复制一份给<code>Gitee</code>使用，例如: <code>_config.gitee.yml</code>，更改相应配置</p>
+<pre><code class="bash">hexo g --config _config.gitee.yml  # 生成文件
+hexo d --config _config.gitee.yml  # 部署到Gitee</code></pre>
+<h3 id="比较麻烦的操作"><a href="#比较麻烦的操作" class="headerlink" title="比较麻烦的操作"></a>比较麻烦的操作</h3><p>为了实现<code>Gitee</code>和<code>Github</code>的部署，我是用了两份配置文件的方法。</p>
 <ul>
 <li>复制一份给<code>Gitee</code>：<code>_config.yml.gitee</code>，更改相应配置。</li>
 <li>复制一份给<code>Github</code>：<code>_config.yml.github</code>，更改相应配置。</li>
