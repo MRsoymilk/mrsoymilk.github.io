@@ -2,6 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.soymilk.fun/2019/09/07/Microcomputer/Arduino/servo/</loc>
+    
+    <lastmod>2020-12-06</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.soymilk.fun/2019/09/12/Microcomputer/51/Linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E7%9A%8451/</loc>
+    
+    <lastmod>2020-12-06</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.soymilk.fun/2019/09/19/Microcomputer/Raspberry/%E6%A0%91%E8%8E%93%E6%B4%BE%E4%B8%8EArduino%E4%B8%B2%E5%8F%A3%E9%80%9A%E4%BF%A1/</loc>
+    
+    <lastmod>2020-12-06</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.soymilk.fun/2020/03/15/Microcomputer/Raspberry/RaspberrySettings/</loc>
+    
+    <lastmod>2020-12-06</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.soymilk.fun/2020/11/16/Microcomputer/Raspberry/RaspberryLCDInstall/</loc>
+    
+    <lastmod>2020-12-06</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.soymilk.fun/2019/10/30/Microcomputer/Raspberry/camera/</loc>
+    
+    <lastmod>2020-12-06</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.soymilk.fun/2020/12/06/Microcomputer/Raspberry/%E6%A0%91%E8%8E%93%E6%B4%BE%E7%B3%BB%E7%BB%9F%E6%BA%90/</loc>
+    
+    <lastmod>2020-12-06</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.soymilk.fun/2020/12/02/Code/Python/PythonMySQL/</loc>
     
     <lastmod>2020-12-02</lastmod>
@@ -156,20 +205,6 @@
   </url>
   
   <url>
-    <loc>https://blog.soymilk.fun/2020/11/16/Microcomputer/Raspberry/RaspberryLCDInstall/</loc>
-    
-    <lastmod>2020-11-16</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.soymilk.fun/2019/10/30/Microcomputer/Raspberry/camera/</loc>
-    
-    <lastmod>2020-11-16</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://blog.soymilk.fun/2019/10/17/OpenCV/OpenCVShowPicture/</loc>
     
     <lastmod>2020-11-16</lastmod>
@@ -180,13 +215,6 @@
     <loc>https://blog.soymilk.fun/2020/02/26/SQL/MySQL/GentooMySQL/</loc>
     
     <lastmod>2020-11-16</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.soymilk.fun/2020/03/15/Microcomputer/Raspberry/RaspberrySettings/</loc>
-    
-    <lastmod>2020-10-12</lastmod>
     
   </url>
   
@@ -373,27 +401,6 @@
   </url>
   
   <url>
-    <loc>https://blog.soymilk.fun/2019/09/19/Microcomputer/Raspberry/%E6%A0%91%E8%8E%93%E6%B4%BE%E4%B8%8EArduino%E4%B8%B2%E5%8F%A3%E9%80%9A%E4%BF%A1/</loc>
-    
-    <lastmod>2020-07-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.soymilk.fun/2019/09/07/Microcomputer/Arduino/servo/</loc>
-    
-    <lastmod>2020-07-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.soymilk.fun/2019/09/12/Microcomputer/51/Linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E7%9A%8451/</loc>
-    
-    <lastmod>2020-07-18</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://blog.soymilk.fun/2019/08/17/Linux/Ubuntu/VirtualBox%E5%AE%89%E8%A3%85Ubuntu18.04/</loc>
     
     <lastmod>2020-07-18</lastmod>
@@ -571,7 +578,7 @@
 
   <url>
     <loc>https://blog.soymilk.fun/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -579,203 +586,203 @@
   
   <url>
     <loc>https://blog.soymilk.fun/tags/gitbook/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/tags/%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/tags/OpenCV/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/tags/tmux/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/tags/MySQL/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/tags/Qt/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/tags/Python/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/tags/Hadoop/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/tags/%E6%96%87%E7%AB%A0/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/tags/QRCode/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/tags/IDEA/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/tags/others/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/tags/Windows/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/tags/Linux/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/tags/OpenGL/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/tags/Shell/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/tags/Android/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/tags/Assembly/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/tags/maven/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/tags/CentOS/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/tags/common/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/tags/Gentoo/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/tags/Ubuntu/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/tags/51/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/tags/Arduino/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/tags/Pi/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/tags/WEB/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/tags/Visual-Studio/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/tags/VSCode/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -784,301 +791,301 @@
   
   <url>
     <loc>https://blog.soymilk.fun/categories/Tool/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/categories/Tool/gitbook/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/categories/%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/categories/Linux/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/categories/Linux/common/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/categories/Database/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/categories/Linux/common/tmux/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/categories/OpenCV/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/categories/Database/MySQL/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/categories/Code/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/categories/Python/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/categories/Code/GUI/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/categories/BigData/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/categories/Code/GUI/Qt/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/categories/BigData/Hadoop/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/categories/%E6%96%87%E7%AB%A0/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/categories/OpenCV/QRCode/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/categories/others/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/categories/Windows/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/categories/Windows/others/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/categories/Linux/Shell/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/categories/Code/Android/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/categories/Code/Assembly/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/categories/Code/OpenGL/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/categories/Code/Java/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/categories/Python/MySQL/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/categories/Code/Python/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/categories/Code/others/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/categories/Linux/CentOS/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/categories/Linux/Gentoo/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/categories/Code/Java/maven/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/categories/Linux/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/categories/Linux/Ubuntu/</loc>
-    <lastmod>2020-12-02</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.soymilk.fun/categories/%E7%A1%AC%E4%BB%B6/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/categories/Tool/Intellij-IDEA/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/categories/Tool/Visual-Studio/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/categories/Tool/VSCode/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/categories/WEB/</loc>
-    <lastmod>2020-12-02</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.soymilk.fun/categories/%E7%A1%AC%E4%BB%B6/51/</loc>
-    <lastmod>2020-12-02</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.soymilk.fun/categories/%E7%A1%AC%E4%BB%B6/Arduino/</loc>
-    <lastmod>2020-12-02</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.soymilk.fun/categories/%E7%A1%AC%E4%BB%B6/Pi/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/categories/WEB/others/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.soymilk.fun/categories/WEB/Spring/</loc>
-    <lastmod>2020-12-02</lastmod>
+    <lastmod>2020-12-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.soymilk.fun/categories/Microcomputer/</loc>
+    <lastmod>2020-12-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.soymilk.fun/categories/Microcomputer/Pi/</loc>
+    <lastmod>2020-12-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.soymilk.fun/categories/Microcomputer/51/</loc>
+    <lastmod>2020-12-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.soymilk.fun/categories/Microcomputer/Arduino/</loc>
+    <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
