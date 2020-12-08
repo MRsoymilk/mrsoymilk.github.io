@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>树莓派系统源 [ Soymilk ]</title>
+  <title>Linux终端代理 [ Soymilk ]</title>
   
 <link rel="shortcut icon" href="/favicon/favicon.ico">
 
@@ -85,16 +85,16 @@
   <div class="milk-body">
     
 <div class="draggable-toc">
-  <div class="toc-title">树莓派系统源</div>
+  <div class="toc-title">Linux终端代理</div>
   <p>process: <span>0</span></p>
   <div class="progress-container">
     <div class="progress-bar" id="bar"></div>
   </div>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#arm64与armhf不同的操作"><span class="toc-text">arm64与armhf不同的操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#arm64"><span class="toc-text">arm64:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#armhf"><span class="toc-text">armhf:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#arm64与armhf相同的操作"><span class="toc-text">arm64与armhf相同的操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#更新"><span class="toc-text">更新</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#设置"><span class="toc-text">设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用"><span class="toc-text">使用</span></a></li></ol>
 </div>
 
 <div class="post-content" id="post-content">
-  <div id="top">树莓派系统源</div>
+  <div id="top">Linux终端代理</div>
   <div class="post">
     
     <div class="content-categories">
@@ -105,15 +105,15 @@
         
           <li>&gt;</li>
           <li>
-            <a href="/categories/Microcomputer/">
-          Microcomputer
+            <a href="/categories/Linux/">
+          Linux
         </a>
           </li>
       
           <li>&gt;</li>
           <li>
-            <a href="/categories/Microcomputer/Pi/">
-          Pi
+            <a href="/categories/Linux/common/">
+          common
         </a>
           </li>
       
@@ -122,31 +122,16 @@
     </div>
     <hr>
     
-    <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
-<li><a href="https://mirrors.tuna.tsinghua.edu.cn/help/debian/" target="_blank" rel="noopener">Debian 镜像使用帮助</a></li>
-<li><a href="https://mirrors.tuna.tsinghua.edu.cn/help/raspbian/" target="_blank" rel="noopener">Raspbian 镜像使用帮助</a></li>
-</ul>
-<p>Raspberry Pi 支持 64 位，其包含与常规 32 位镜像相同的应用程序集和相同的桌面环境，针对 Debian arm64 构建。</p>
+    <h2 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h2><pre><code class="bash">alias setproxy=&quot;expore ALL_PROXY=socks5://127.0.0.1:1080&quot;
+alias unsetproxy=&quot;unset ALL_PROXY&quot;</code></pre>
 <a id="more"></a>
 
-<h2 id="arm64与armhf不同的操作"><a href="#arm64与armhf不同的操作" class="headerlink" title="arm64与armhf不同的操作"></a>arm64与armhf不同的操作</h2><h3 id="arm64"><a href="#arm64" class="headerlink" title="arm64:"></a>arm64:</h3><p>编辑<code>/etc/apt/sources.list</code>文件</p>
-<pre><code class="bash"># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
-deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free
-deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-updates main contrib non-free
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-updates main contrib non-free
-deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-backports main contrib non-free
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-backports main contrib non-free
-deb https://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates main contrib non-free
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates main contrib non-free</code></pre>
-<h3 id="armhf"><a href="#armhf" class="headerlink" title="armhf:"></a>armhf:</h3><p>编辑<code>/etc/apt/sources.list</code>文件</p>
-<pre><code class="bash"># 编辑 `/etc/apt/sources.list` 文件，删除原文件所有内容，用以下内容取代：
-deb http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main non-free contrib rpi
-deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main non-free contrib rpi</code></pre>
-<h2 id="arm64与armhf相同的操作"><a href="#arm64与armhf相同的操作" class="headerlink" title="arm64与armhf相同的操作"></a>arm64与armhf相同的操作</h2><p>编辑<code>/etc/apt/sources.list.d/raspi.list</code>文件</p>
-<pre><code class="bash"># 编辑 `/etc/apt/sources.list.d/raspi.list` 文件，删除原文件所有内容，用以下内容取代：
-deb http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ buster main ui</code></pre>
-<h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><pre><code class="bash">sudo apt update &amp;&amp; sudo apt upgrade</code></pre>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>使用代理</p>
+<pre><code class="bash">setproxy</code></pre>
+<p>取消代理</p>
+<pre><code class="bash">unsetproxy</code></pre>
+<p>验证</p>
+<pre><code class="bash">curl ip.c</code></pre>
 
     
     <hr>
@@ -155,8 +140,8 @@ deb http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ buster main ui</code></pre>
       <i class="fa fa-tags"></i>
       <ul>
         
-        <li><a href="/tags/Pi/">
-          Pi
+        <li><a href="/tags/common/">
+          common
         </a></li>
       
       </ul>
