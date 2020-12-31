@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>useradd无法创建用户主目录 [ Soymilk ]</title>
+  <title>Linux常见问题 [ Soymilk ]</title>
   
 <link rel="shortcut icon" href="/favicon/favicon.ico">
 
@@ -85,16 +85,16 @@
   <div class="milk-body">
     
 <div class="draggable-toc">
-  <div class="toc-title">useradd无法创建用户主目录</div>
+  <div class="toc-title">Linux常见问题</div>
   <p>process: <span>0</span></p>
   <div class="progress-container">
     <div class="progress-bar" id="bar"></div>
   </div>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#写在前面"><span class="toc-text">写在前面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#问题"><span class="toc-text">问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决办法"><span class="toc-text">解决办法</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#问题"><span class="toc-text">问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SSH未知终端"><span class="toc-text">SSH未知终端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SSH服务安装"><span class="toc-text">SSH服务安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#apt报错"><span class="toc-text">apt报错</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ubuntu-Snap-报错"><span class="toc-text">Ubuntu Snap 报错</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ubuntu-更改tty界面字体大小"><span class="toc-text">Ubuntu 更改tty界面字体大小</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#apt使用-rpm包"><span class="toc-text">apt使用.rpm包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CentOS大多软件包不能找到"><span class="toc-text">CentOS大多软件包不能找到</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Windows发来文件乱码"><span class="toc-text">Windows发来文件乱码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ubuntu-18-04-useradd无法创建用户主目录"><span class="toc-text">Ubuntu 18.04 useradd无法创建用户主目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决办法"><span class="toc-text">解决办法</span></a></li></ol>
 </div>
 
 <div class="post-content" id="post-content">
-  <div id="top">useradd无法创建用户主目录</div>
+  <div id="top">Linux常见问题</div>
   <div class="post">
     
     <div class="content-categories">
@@ -112,8 +112,8 @@
       
           <li>&gt;</li>
           <li>
-            <a href="/categories/Linux/问题记录/">
-          问题记录
+            <a href="/categories/Linux/Problem/">
+          Problem
         </a>
           </li>
       
@@ -122,10 +122,66 @@
     </div>
     <hr>
     
-    <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>操作系统：Ubuntu 18.04</p>
-<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>使用 useradd 添加用户，-d 指定用户家目录，/home 目录下并没有创建用户 🏠 目录</p>
+    <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><ul>
+<li>SSH未知终端: <code>&#39;alacritty&#39;: unknown terminal type.</code></li>
+<li>SSH 服务安装: <code>openssh-client</code>和<code>openssh-server</code></li>
+<li>apt 报错: <code>Could not get lock /var/lib/dpkg/lock-open</code></li>
+<li>Ubuntu Snap 报错: <code>error: cannot install &quot;douban-fm&quot;: snap &quot;core&quot; has changes in progress</code></li>
+<li>Ubuntu 更改tty界面字体大小</li>
+<li>apt使用<code>.rpm</code>包</li>
+<li>CentOS大多软件包不能找到</li>
+<li>Windows发来文件乱码</li>
+<li>Ubuntu 18.04 useradd无法创建用户主目录</li>
+</ul>
 <a id="more"></a>
 
+<h2 id="SSH未知终端"><a href="#SSH未知终端" class="headerlink" title="SSH未知终端"></a>SSH未知终端</h2><p>我使用的终端是<code>alacritty</code>(客户端)，服务器端无法识别非主流终端，解决方法:</p>
+<p>在服务器端的<code>.bashrc</code>文件中加入以下命令:</p>
+<pre><code class="bash">export TERM=xterm-256color  # 或其他可识别终端</code></pre>
+<p>每次启动shell默认执行<code>export</code>命令。</p>
+<h2 id="SSH服务安装"><a href="#SSH服务安装" class="headerlink" title="SSH服务安装"></a>SSH服务安装</h2><p>以Ubuntu为例:</p>
+<pre><code class="bash">sudo apt install -y openssh-client openssh-server</code></pre>
+<h2 id="apt报错"><a href="#apt报错" class="headerlink" title="apt报错"></a>apt报错</h2><p><code>Could not get lock /var/lib/dpkg/lock-open</code></p>
+<p>报错原因: 因为apt锁机制，只允许一个apt进程存在</p>
+<p>解决方法:</p>
+<pre><code class="bash">sudo rm /var/lib/apt/lists/lock
+
+sudo rm /var/cache/apt/archives/lock
+sudo rm /var/lib/dpkg/lock</code></pre>
+<h2 id="Ubuntu-Snap-报错"><a href="#Ubuntu-Snap-报错" class="headerlink" title="Ubuntu Snap 报错"></a>Ubuntu Snap 报错</h2><p><code>error: cannot install &quot;douban-fm&quot;: snap &quot;core&quot; has c
+      hanges in progress</code></p>
+<p>解决方法:</p>
+<pre><code class="bash">sudo snap changes    # 查看正在进行的change
+sudo snap abort num  # 终止编号为num的进程</code></pre>
+<p>其他:</p>
+<p>snap类似容器操作，拥有应用程序所有的文件和库，各个应用程序完全独立</p>
+<ul>
+<li>应用程序更容易管理</li>
+<li>占用更多的磁盘空间</li>
+</ul>
+<p>snap软件安装：一般安装在<code>/snap</code>目录下</p>
+<p>snap常用操作:</p>
+<pre><code class="bash">sudo snap list                    # 查看已安装
+sudo snap find &lt;text to search&gt;   # 搜索要安装的snap包
+sudo snap install &lt;snap name&gt;     # 安装snap包
+sudo snap refresh &lt;snap name&gt;     # 更新一个snap包
+sudo snap revert &lt;snap name&gt;      # 包还原到以前安装的版本
+sudo snap remove &lt;snap name&gt;      # 删除已安装的snap包</code></pre>
+<h2 id="Ubuntu-更改tty界面字体大小"><a href="#Ubuntu-更改tty界面字体大小" class="headerlink" title="Ubuntu 更改tty界面字体大小"></a>Ubuntu 更改tty界面字体大小</h2><p>文件<code>console-setup</code>指定编码和字体</p>
+<p><code>setupcon</code>程序实现字体大小</p>
+<pre><code class="bash">sudo dpkg-reconfigure console-setup  # 根据提示进行操作即可</code></pre>
+<h2 id="apt使用-rpm包"><a href="#apt使用-rpm包" class="headerlink" title="apt使用.rpm包"></a>apt使用<code>.rpm</code>包</h2><p>使用转换工具<code>alien</code></p>
+<p>安装:</p>
+<pre><code class="bash">sudo apt install alien</code></pre>
+<p>转换:</p>
+<pre><code class="bash">alien --scripts name.rpm</code></pre>
+<h2 id="CentOS大多软件包不能找到"><a href="#CentOS大多软件包不能找到" class="headerlink" title="CentOS大多软件包不能找到"></a>CentOS大多软件包不能找到</h2><p>需要启用EPEL</p>
+<pre><code class="bash">sudo yum install epel-release
+sudo yum update</code></pre>
+<h2 id="Windows发来文件乱码"><a href="#Windows发来文件乱码" class="headerlink" title="Windows发来文件乱码"></a>Windows发来文件乱码</h2><p>一般是由于编码不同引起的。</p>
+<p>使用<code>iconv</code>进行格式转换。</p>
+<pre><code class="bash">iconv -f GB2312 -t UTF-8 your_file &gt; target_file</code></pre>
+<h2 id="Ubuntu-18-04-useradd无法创建用户主目录"><a href="#Ubuntu-18-04-useradd无法创建用户主目录" class="headerlink" title="Ubuntu 18.04 useradd无法创建用户主目录"></a>Ubuntu 18.04 useradd无法创建用户主目录</h2><p>使用 useradd 添加用户，-d 指定用户家目录，/home 目录下并没有创建用户 🏠 目录</p>
 <h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>方法一：在<code>/etc/login.defs</code>文件中添加或修改为<code>CREATE_HOME yes</code></p>
 <p>方法二：<code>useradd</code>使用<code>-m</code>参数,例如<code>useradd -m apple</code></p>
 

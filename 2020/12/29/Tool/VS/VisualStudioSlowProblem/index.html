@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>CentOS最小化安装后无法联网 [ Soymilk ]</title>
+  <title>Visual Studio 2019 卡顿问题 [ Soymilk ]</title>
   
 <link rel="shortcut icon" href="/favicon/favicon.ico">
 
@@ -85,16 +85,16 @@
   <div class="milk-body">
     
 <div class="draggable-toc">
-  <div class="toc-title">CentOS最小化安装后无法联网</div>
+  <div class="toc-title">Visual Studio 2019 卡顿问题</div>
   <p>process: <span>0</span></p>
   <div class="progress-container">
     <div class="progress-bar" id="bar"></div>
   </div>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#写在前面"><span class="toc-text">写在前面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#操作"><span class="toc-text">操作</span></a></li></ol>
+  
 </div>
 
 <div class="post-content" id="post-content">
-  <div id="top">CentOS最小化安装后无法联网</div>
+  <div id="top">Visual Studio 2019 卡顿问题</div>
   <div class="post">
     
     <div class="content-categories">
@@ -105,15 +105,15 @@
         
           <li>&gt;</li>
           <li>
-            <a href="/categories/Linux/">
-          Linux
+            <a href="/categories/Tool/">
+          Tool
         </a>
           </li>
       
           <li>&gt;</li>
           <li>
-            <a href="/categories/Linux/问题记录/">
-          问题记录
+            <a href="/categories/Tool/Visual-Studio/">
+          Visual Studio
         </a>
           </li>
       
@@ -122,40 +122,11 @@
     </div>
     <hr>
     
-    <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p><strong>问题原因</strong>：最小化安装 CentOS 7 默认关闭网卡，需要手动开启</p>
-<a id="more"></a>
-
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://segmentfault.com/a/1190000014937197" target="_blank" rel="noopener">链接</a></p>
-<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><p>以下命令，使用<code>root</code>权限</p>
-<ol>
-<li>网卡位置确定</li>
-</ol>
-<pre><code class="bash">cd /etc/sysconfig/network-scripts/</code></pre>
-<p>网卡命名无一定规范</p>
-<ul>
-<li>eth0：一般用于以太网(Ethernet)接口，0 表示为第一块网卡</li>
-<li>wifi0：无线网络接口</li>
-<li>lo：本地(local)环回接口，虚拟网络接口<ul>
-<li>在系统内部接收和发送数据包而不需要驱动程序</li>
-<li>使用上与真实网络接口一致<br>我的网卡：ifcfg-eth0</li>
-</ul>
-</li>
-</ul>
-<ol start="2">
-<li>编辑你的网卡</li>
-</ol>
-<pre><code class="bash">vi ifcfg-eth0  # 编辑网卡文件，取决于本机网卡
-# 修改`ONBOOT=no`为`ONBOOT=yes`</code></pre>
-<ol start="3">
-<li>重启网络以应用(多种方法)</li>
-</ol>
-<pre><code class="bash">reboot  # 重启计算机
-service network restart  # 重启网卡
-systemctl restart network  # 重启网卡，CentOS7后功能</code></pre>
-<ol start="4">
-<li>检验是否联网成功</li>
-</ol>
-<pre><code class="bash">ping www.baidu.com</code></pre>
+    <p>最近使用Visual Studio卡到爆，智能提示需要2s才能出结果，编译运行等基础功能也十分缓慢。</p>
+<p>不同电脑不同的解决方法。本人电脑是由于更换显卡，从NVIDIA到AMD。但是先前安装的NVIDIA Nsight Visual Studio Edition仍然存在。</p>
+<pre><code>NVIDIA Nsight Visual Studio Edition是用于异构平台的应用程序开发环境，可将GPU计算引入Microsoft Visual Studio。 NVIDIA Nsight VSE允许构建和调试集成的GPU内核和本机CPU代码，以及检查GPU和内存的状态。</code></pre><p>虽然NVIDIA显卡不存在，但是Visual Studio并没有提示任何错误。</p>
+<p>卸载NVIDIA Nsight Visual Studio Edition即可。</p>
+<p><img src="./slowVisualStudio.png" alt="Nsight"></p>
 
     
     <hr>
@@ -164,8 +135,8 @@ systemctl restart network  # 重启网卡，CentOS7后功能</code></pre>
       <i class="fa fa-tags"></i>
       <ul>
         
-        <li><a href="/tags/CentOS/">
-          CentOS
+        <li><a href="/tags/Visual-Studio/">
+          Visual Studio
         </a></li>
       
       </ul>

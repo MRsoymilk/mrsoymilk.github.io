@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>nginx图片服务器 [ Soymilk ]</title>
+  <title>pyqt5 LCD屏幕 [ Soymilk ]</title>
   
 <link rel="shortcut icon" href="/favicon/favicon.ico">
 
@@ -85,16 +85,16 @@
   <div class="milk-body">
     
 <div class="draggable-toc">
-  <div class="toc-title">nginx图片服务器</div>
+  <div class="toc-title">pyqt5 LCD屏幕</div>
   <p>process: <span>0</span></p>
   <div class="progress-container">
     <div class="progress-bar" id="bar"></div>
   </div>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置"><span class="toc-text">配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#可选"><span class="toc-text">可选</span></a></li></ol>
+  
 </div>
 
 <div class="post-content" id="post-content">
-  <div id="top">nginx图片服务器</div>
+  <div id="top">pyqt5 LCD屏幕</div>
   <div class="post">
     
     <div class="content-categories">
@@ -105,15 +105,15 @@
         
           <li>&gt;</li>
           <li>
-            <a href="/categories/Web/">
-          Web
+            <a href="/categories/Python/">
+          Python
         </a>
           </li>
       
           <li>&gt;</li>
           <li>
-            <a href="/categories/Web/Server/">
-          Server
+            <a href="/categories/Python/pyqt5/">
+          pyqt5
         </a>
           </li>
       
@@ -122,24 +122,48 @@
     </div>
     <hr>
     
-    <p>可以在浏览器端查看图片。</p>
-<a id="more"></a>
+    <p>效果</p>
+<p><img src="clock.png" alt="clock"></p>
+<pre><code class="python">import sys
 
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><pre><code class="bash">sudo apt install nginx</code></pre>
-<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>编辑配置文件<code>/etc/nginx/sites-available/default</code></p>
-<p>增加内容，其中<code>root</code>位置具体到项目可能有所不同。</p>
-<pre><code class="config">location /images/ {
-  root /home/pi/toy-car/html;
-  audoindex on;
-}
+from PyQt5.QtCore import QTimer, QTime
+from PyQt5.QtWidgets import QWidget, QLCDNumber, QVBoxLayout, QApplication
 
-location /data/ {
-  root /home/pi/toy-car/html;
-  autoindex on;
-}</code></pre>
-<h2 id="可选"><a href="#可选" class="headerlink" title="可选"></a>可选</h2><p>nginx默认时间是<code>UTC</code>，修改为本地</p>
-<p>编辑文件<code>/etc/nginx/nginx.conf</code>，<code>http</code>加入：</p>
-<pre><code class="config">autoindex_localtime on;</code></pre>
+class Clock(QWidget):
+    def __init__(self):
+        QWidget.__init__(self)
+        # set layout
+        self.resize(600, 300)
+        self.v_layout = QVBoxLayout()
+        self.setLayout(self.v_layout)
+
+        self.lcd = QLCDNumber()
+        self.lcd.setDigitCount(8)
+        self.v_layout.addWidget(self.lcd)
+
+        # data
+        self.dot = True
+        self.timer = QTimer(self)
+        self.timer.timeout.connect(self.updateTime)
+        self.timer.start(1000)
+
+    # update
+    def updateTime(self):
+        time = QTime.currentTime()
+        time_text = time.toString()
+        if self.dot:
+            time_text.replace(&quot;:&quot;, &quot; &quot;)
+            self.dot = False
+        else:
+            self.dot = True
+        self.lcd.display(time_text)
+
+
+if __name__ == &#39;__main__&#39;:
+    app = QApplication(sys.argv)
+    clock = Clock()
+    clock.show()
+    sys.exit(app.exec_())</code></pre>
 
     
     <hr>
@@ -148,8 +172,8 @@ location /data/ {
       <i class="fa fa-tags"></i>
       <ul>
         
-        <li><a href="/tags/Web/">
-          Web
+        <li><a href="/tags/pyqt5/">
+          pyqt5
         </a></li>
       
       </ul>
