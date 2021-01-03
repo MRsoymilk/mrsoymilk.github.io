@@ -20,9 +20,18 @@ $(() => {
 
   // toc style
   if (document.getElementById("post-content")) {
-    _h2_list = document.getElementsByTagName("h2");
-    _h3_list = document.getElementsByTagName("h3");
-    _h_list = Array.from(_h2_list).concat(Array.from(_h3_list));
+    var _h1_list = document.getElementsByTagName("h1");
+    var _h2_list = document.getElementsByTagName("h2");
+    var _h3_list = document.getElementsByTagName("h3");
+    var _h4_list = document.getElementsByTagName("h4");
+    var _h5_list = document.getElementsByTagName("h5");
+    var _h6_list = document.getElementsByTagName("h6");
+    var _h_list = Array.from(_h1_list)
+      .concat(Array.from(_h2_list))
+      .concat(Array.from(_h3_list))
+      .concat(Array.from(_h4_list))
+      .concat(Array.from(_h5_list))
+      .concat(Array.from(_h6_list));
     var h_list = _h_list.sort(function (a, b) {
       return a.offsetTop - b.offsetTop;
     });
@@ -33,14 +42,14 @@ $(() => {
       var height = page_height - _height;
 
       // progress
-      temp_height = $("#post-content").scrollTop();
+      var temp_height = $("#post-content").scrollTop();
       var scrolled = (temp_height / height) * 100;
       document.getElementById("bar").style.width = scrolled + "%";
       $("div p span").text(scrolled.toFixed(2) + "%");
 
       // highlight
       len = h_list.length / 2;
-      for (var i = 0; i <= len; ++i) {
+      for (var i = 0; i < len; ++i) {
         if (temp_height - h_list[i].offsetTop <= 0) {
           target = h_list[i].id;
           break;
@@ -58,16 +67,14 @@ $(() => {
   // nav-menu highlight
   $(() => {
     var title = document.title;
-    if (title[0] == '[' && title[title.length - 1] == ']') {
+    if (title[0] == "[" && title[title.length - 1] == "]") {
       document.getElementById("Home").className += "active";
-    }
-    else if(title.search("Archives") == 0){
+    } else if (title.search("Archives") == 0) {
       document.getElementById("Archives").className += "active";
+    } else if (title.search("about") == 0) {
+      document.getElementById("About").className += "active";
     }
-    else if(title.search("about") == 0){
-      document.getElementById("About").className += "active"
-    }
-  })
+  });
 
   // header system info
   $(() => {
@@ -192,6 +199,15 @@ $(() => {
         $(this)
           .children(".hljs-prompt")
           .click(function () {
+            // copy prompt
+            var prompt = document.createElement("span");
+            prompt.className = "Tips";
+            prompt.innerHTML = "alerady copy!";
+            document.body.appendChild(prompt);
+            setTimeout(function () {
+              document.body.removeChild(prompt);
+            }, 500);
+
             var text = $(_this).text();
             text = text.substring(4, text.length);
             navigator.clipboard.writeText(text).then(
