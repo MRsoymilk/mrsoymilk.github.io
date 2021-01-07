@@ -117,15 +117,17 @@
     
     <h2 id="内容折叠"><a href="#内容折叠" class="headerlink" title="内容折叠"></a>内容折叠</h2><pre><code class="HTML">&lt;details&gt;
 &lt;summary&gt;more&lt;/summary&gt;
+
 what&#39;s more?
 this is more.
 &lt;/details&gt;</code></pre>
 <a id="more"></a>
 
+<p><strong>注意</strong>：<code>&lt;summary&gt;</code>标签下需要空一行否则显示原始文本。</p>
 <details>
 <summary>more</summary>
-what's more?
-this is more.
+
+<p>what’s more?<br>this is more.</p>
 </details>
 
 <p><code>&lt;details&gt;</code>：HTML 元素，切换为展开状态时显示内含内容</p>
@@ -134,17 +136,18 @@ this is more.
 <p><code>Microsoft Edge</code> 不支持。</p>
 <p><code>Firefox</code>、<code>Chrome</code> 支持。</p>
 <h3 id="个人使用"><a href="#个人使用" class="headerlink" title="个人使用"></a>个人使用</h3><p>主要是压缩一些代码。</p>
-<pre><code>&lt;details&gt;
+<pre><code class="HTML">&lt;details&gt;
   &lt;summary&gt;hello&lt;/summary&gt;
-  ```bash
-    echo &quot;hello world&quot;
-  ```
-&lt;/details&gt;</code></pre><p>效果：</p>
+
+```bash
+  echo &quot;hello world&quot;
+```
+&lt;/details&gt;</code></pre>
+<p>效果：</p>
 <details>
   <summary>hello</summary>
-  ```bash
-    echo "hello world"
-  ```
+
+<pre><code class="bash">  echo &quot;hello world&quot;</code></pre>
 </details>
 
 
