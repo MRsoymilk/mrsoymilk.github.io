@@ -90,7 +90,7 @@
   <div class="progress-container">
     <div class="progress-bar" id="bar"></div>
   </div>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#简单介绍"><span class="toc-text">简单介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基础原理"><span class="toc-text">基础原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SDK包结构"><span class="toc-text">SDK包结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#性能"><span class="toc-text">性能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#阈值推荐"><span class="toc-text">阈值推荐</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Windows-10-开发环境搭建"><span class="toc-text">Windows 10 开发环境搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建项目"><span class="toc-text">创建项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基础文件配置"><span class="toc-text">基础文件配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#虹软SDK"><span class="toc-text">虹软SDK</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#OpenCV"><span class="toc-text">OpenCV</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dll文件配置"><span class="toc-text">.dll文件配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加依赖"><span class="toc-text">添加依赖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运行验证"><span class="toc-text">运行验证</span></a></li></ol></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#简单介绍"><span class="toc-text">简单介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基础原理"><span class="toc-text">基础原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SDK包结构"><span class="toc-text">SDK包结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#性能"><span class="toc-text">性能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#阈值推荐"><span class="toc-text">阈值推荐</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Windows-10-开发环境搭建"><span class="toc-text">Windows 10 开发环境搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建项目"><span class="toc-text">创建项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基础文件配置"><span class="toc-text">基础文件配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#虹软SDK"><span class="toc-text">虹软SDK</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#OpenCV"><span class="toc-text">OpenCV</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dll文件配置"><span class="toc-text">.dll文件配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加依赖"><span class="toc-text">添加依赖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运行验证"><span class="toc-text">运行验证</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux-开发环境搭建"><span class="toc-text">Linux 开发环境搭建</span></a></li></ol>
 </div>
 
 <div class="post-content" id="post-content">
@@ -130,7 +130,7 @@
     <hr>
     
     <p>基于官方说明文档的简单介绍。</p>
-<p>Windows开发环境配置：Visual Studio 2019，虹软SDK Windows 64位 3.0版本。</p>
+<p>Windows开发环境配置：Visual Studio 2019，虹软SDK Windows 64位 3.0版本。<br>Linux开发环境配置：CLion（使用cmake即可），虹软SDK Linux64 3.0版本。</p>
 <a id="more"></a>
 
 <h2 id="简单介绍"><a href="#简单介绍" class="headerlink" title="简单介绍"></a>简单介绍</h2><p><img src="function.png" alt="function"></p>
@@ -267,6 +267,64 @@ int main() {
     return 0;
 }</code></pre>
 <p><img src="result.png" alt="result"></p>
+<h2 id="Linux-开发环境搭建"><a href="#Linux-开发环境搭建" class="headerlink" title="Linux 开发环境搭建"></a>Linux 开发环境搭建</h2><p>下载相应SDK。</p>
+<p>ArcSoft Linux x64 SDK目录结构：</p>
+<pre><code class="code">├── doc
+│   └── ARCSOFT_ARC_FACE_DEVELOPER&#39;S_GUIDE.pdf
+├── inc
+│   ├── amcomdef.h
+│   ├── arcsoft_face_sdk.h
+│   ├── asvloffscreen.h
+│   └── merror.h
+├── lib
+│   └── linux_x64
+│       ├── libarcsoft_face_engine.so
+│       └── libarcsoft_face.so
+├── releasenotes.txt
+└── samplecode
+    ├── ASFTestDemo
+    └── ReadMe.txt</code></pre>
+<p>项目结构：</p>
+<pre><code class="code">├── cmake-build-debug
+│   ├── ArcFace64.dat
+│   ├── CMakeCache.txt
+│   ├── CMakeFiles
+│   ├── cmake_install.cmake
+│   ├── Makefile
+│   ├── MilkFace_Linux
+│   └── MilkFace_Linux.cbp
+├── CMakeLists.txt
+├── inc
+│   ├── amcomdef.h
+│   ├── arcsoft_face_sdk.h
+│   ├── asvloffscreen.h
+│   └── merror.h
+├── lib
+│   ├── libarcsoft_face_engine.so
+│   └── libarcsoft_face.so
+└── main.cpp</code></pre>
+<p>将SDK下<code>lib/</code>目录内文件移入项目<code>lib</code>目录下。</p>
+<p>将SDK下<code>inc/</code>目录内文件移入项目<code>inc</code>目录下。</p>
+<p><code>CMakeLists.txt</code>内容：</p>
+<pre><code class="cmake">cmake_minimum_required(VERSION 3.17)
+project(MilkFace_Linux)
+
+set(CMAKE_CXX_STANDARD 14)
+
+# OpenCV
+find_package( OpenCV REQUIRED )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+
+# ArcSoft
+include_directories(./inc)
+link_directories(./lib)
+
+add_executable(${PROJECT_NAME} main.cpp)
+target_link_libraries( ${PROJECT_NAME}
+        ${OpenCV_LIBS}
+        arcsoft_face
+        arcsoft_face_engine
+        )</code></pre>
 
     
     <hr>

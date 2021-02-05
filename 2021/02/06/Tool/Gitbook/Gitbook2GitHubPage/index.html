@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Gentoo安装MySQL [ Soymilk ]</title>
+  <title>Gitbook发布到GitHub静态页面 [ Soymilk ]</title>
   
 <link rel="shortcut icon" href="/favicon/favicon.ico">
 
@@ -85,16 +85,16 @@
   <div class="milk-body">
     
 <div class="draggable-toc">
-  <div class="toc-title">Gentoo安装MySQL</div>
+  <div class="toc-title">Gitbook发布到GitHub静态页面</div>
   <p>process: <span>0</span></p>
   <div class="progress-container">
     <div class="progress-bar" id="bar"></div>
   </div>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#启动服务"><span class="toc-text">启动服务</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#OpenRC"><span class="toc-text">OpenRC</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Systemd"><span class="toc-text">Systemd</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#增加安全性-可选"><span class="toc-text">增加安全性(可选)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基础使用"><span class="toc-text">基础使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装工具"><span class="toc-text">安装工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#连接数据库"><span class="toc-text">连接数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他"><span class="toc-text">其他</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#隐藏历史记录"><span class="toc-text">隐藏历史记录</span></a></li></ol></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用方法"><span class="toc-text">使用方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#操作"><span class="toc-text">操作</span></a></li></ol>
 </div>
 
 <div class="post-content" id="post-content">
-  <div id="top">Gentoo安装MySQL</div>
+  <div id="top">Gitbook发布到GitHub静态页面</div>
   <div class="post">
     
     <div class="content-categories">
@@ -105,15 +105,15 @@
         
           <li>&gt;</li>
           <li>
-            <a href="/categories/Database/">
-          Database
+            <a href="/categories/Tool/">
+          Tool
         </a>
           </li>
       
           <li>&gt;</li>
           <li>
-            <a href="/categories/Database/MySQL/">
-          MySQL
+            <a href="/categories/Tool/gitbook/">
+          gitbook
         </a>
           </li>
       
@@ -122,36 +122,30 @@
     </div>
     <hr>
     
-    <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://wiki.gentoo.org/wiki/MySQL/zh-cn" target="_blank" rel="noopener">MySQL Wiki</a></p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><pre><code class="bash">emerge --ask dev-db/mysql</code></pre>
+    <h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>创建两个分支，一个用来开发，一个用来网页展示</p>
+<p>开发分支为<code>main</code><br>网页展示为<code>book</code></p>
 <a id="more"></a>
 
-<h2 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h2><h3 id="OpenRC"><a href="#OpenRC" class="headerlink" title="OpenRC"></a>OpenRC</h3><p>启动</p>
-<pre><code class="bash">rc-update mysql start</code></pre>
-<p>默认启动</p>
-<pre><code class="bash">rc-update add mysql default</code></pre>
-<h3 id="Systemd"><a href="#Systemd" class="headerlink" title="Systemd"></a>Systemd</h3><p>启动</p>
-<pre><code class="bash">system start mysql</code></pre>
-<p>默认启动</p>
-<pre><code class="bash">system enable mysql</code></pre>
-<p><strong>第一次可能无法启动</strong></p>
-<p>使用<code>emerge --config</code>生成配置文件</p>
-<pre><code class="bash">emerge --config dev-db/mysql</code></pre>
-<p>根据要求配置即可</p>
-<p><code>root</code>用户密码在这一步设置</p>
-<h3 id="增加安全性-可选"><a href="#增加安全性-可选" class="headerlink" title="增加安全性(可选)"></a>增加安全性(可选)</h3><pre><code class="bash">mysql_secure_installation</code></pre>
-<p>比如增加密码时间有效性</p>
-<h2 id="基础使用"><a href="#基础使用" class="headerlink" title="基础使用"></a>基础使用</h2><pre><code class="bash"># 连接数据库
-mysql -u root -p</code></pre>
-<h2 id="安装工具"><a href="#安装工具" class="headerlink" title="安装工具"></a>安装工具</h2><p>mycli：</p>
-<pre><code class="bash">emerge --ask --verbose mycli</code></pre>
-<p>Examples:</p>
-<pre><code class="bash">mycli my_database
-mycli -u my_user -h my_host.com my_database
-mycli mysql://my_user@my_host.com:3306/my_database</code></pre>
-<h2 id="连接数据库"><a href="#连接数据库" class="headerlink" title="连接数据库"></a>连接数据库</h2><pre><code>https://dev.mysql.com/doc/dev/connector-cpp/8.0/devapi_ref.html</code></pre><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="隐藏历史记录"><a href="#隐藏历史记录" class="headerlink" title="隐藏历史记录"></a>隐藏历史记录</h3><p>将保存有<code>mysql</code>命令的文件链接到<code>/dev/null</code>，置入黑洞之中。</p>
-<pre><code class="bash">rm ~/.mysql_history
-ln -sf /dev/null ~/.mysql_history</code></pre>
+<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><ol>
+<li>在<code>main</code>分支上生成静态页面</li>
+</ol>
+<pre><code class="bash">gitbook build</code></pre>
+<p>默认在<code>_book</code>目录中生成。</p>
+<ol start="2">
+<li>创建分支<code>book</code>：</li>
+</ol>
+<pre><code class="bash">git branch book</code></pre>
+<ol start="3">
+<li>切换分支<code>book</code>：</li>
+</ol>
+<pre><code class="bash">git checkout book</code></pre>
+<p>删除所有文件<br>将<code>_book</code>中文件转移至根目录</p>
+<ol start="4">
+<li>在不同分支下<code>git push</code></li>
+</ol>
+<p>可能需要执行<code>--set-upstream</code>指令</p>
+<pre><code class="bash">git push --set-upstream origin book</code></pre>
+<p>登录Github相应项目 -&gt; Settings -&gt; GitHub Page -&gt; 选择相应分支</p>
 
     
     <hr>
@@ -160,12 +154,8 @@ ln -sf /dev/null ~/.mysql_history</code></pre>
       <i class="fa fa-tags"></i>
       <ul>
         
-        <li><a href="/tags/MySQL/">
-          MySQL
-        </a></li>
-      
-        <li><a href="/tags/Gentoo/">
-          Gentoo
+        <li><a href="/tags/gitbook/">
+          gitbook
         </a></li>
       
       </ul>
