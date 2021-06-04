@@ -478,6 +478,7 @@ details {
 .content-tags {
   display: flex;
   margin-top: 50px;
+  margin-bottom: 50px;
 }
 .content-tags a {
   border: 1px solid;
@@ -580,7 +581,6 @@ details {
   overflow-x: hidden;
   height: 100%;
 }
-
 /* cyrillic */
 @font-face {
   font-family: "Bad Script";
